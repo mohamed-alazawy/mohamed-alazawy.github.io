@@ -1,0 +1,349 @@
+.card {
+    background: var(--bg);
+}
+
+.tab-content .card-header,
+.tab-content .card-footer {
+    margin: 0;
+    border: 0;
+}
+
+.card-body {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.card-footer {
+    background: var(--bg-panel);
+    border: 0;
+    padding-left: 0;
+    padding-right: 0;
+
+    ul {
+        display: inline-block;
+        border: 0;
+        width: 100%;
+    }
+}
+
+.globle_profile_sidebar .group_menu li {
+    margin: 0;
+    margin-bottom: 10px;
+    background: var(--bg);
+    width: 100%;
+    border-radius: $radius-10;
+    min-height: $barwidth;
+    text-align: left;
+
+    a {
+        color: var(--color-text);
+        border-radius: $radius-10;
+        width: 100%;
+        padding: 15px!important;
+        opacity: 1;
+        text-align: $left;
+
+        &.active {
+            color: var(--secondary-color);
+            border: 1px solid;
+            opacity: 0.8;
+        }
+
+        i {
+            font-size: $lgfont;
+            float: $left;
+            margin: 0 5px;
+            opacity: 0.7;
+        }
+
+        span {
+            display: block;
+            width: 100%;
+            text-align: $right;
+            opacity: 0.6;
+            font-size: $mdfont;
+        }
+    }
+}
+
+.tab-content {
+    height: auto;
+}
+
+#mygroups>ul,
+.timeline {
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+#mygroups {
+    .col-md-4 {
+        overflow: hidden;
+        padding: 0 5px;
+        float: $left;
+    }
+
+    .card-header {
+        h2 {
+            float: $left;
+            max-width: 50%;
+            display: inline-block;
+            font-size: $lgfont;
+            line-height: 30px;
+        }
+
+        .form-control {
+            float: $right;
+            display: inline-block;
+            max-width: 50%;
+            border-radius: $radius-20;
+            border-color: var(--secondary-color);
+            opacity: 0.3;
+            padding-right: 35px;
+
+            &:focus {
+                opacity: 0.7;
+            }
+        }
+
+        form.search {
+            position: relative;
+        }
+    }
+
+    .card-post {
+        opacity: 1 !important;
+        height: auto !important;
+
+        .members_count {
+            display: inline-block;
+        }
+
+        button {
+            background: transparent;
+            border-radius: $radius-20;
+            color: var(--white-color-text);
+            padding: 0 10px;
+        }
+
+        i {
+            font-size: $mdfont;
+            margin: 4px 5px;
+            float: $left;
+        }
+
+        h3 {
+            clear: both;
+            font-size: $lgfont;
+            text-align: $left;
+            font-weight: bold;
+        }
+    }
+}
+
+//
+// // last posts
+.group_name {
+    display: inline-block;
+    float: $right;
+
+    i {
+        float: $left;
+        margin: 5px;
+    }
+
+    span {
+        opacity: 0.8;
+    }
+}
+
+// group page
+#groups {
+    background: transparent !important;
+}
+
+.globle_profile_sidebar .group_menu li.follow_statistics a span {
+    text-align: center;
+}
+
+#groups #profile_nav li a {
+    font-size: 14px;
+}
+
+#groups #profile_nav li span {
+    font-size: 11px;
+}
+
+#groups #profile_nav li a.active {
+    border: 1px solid var(--secondary-color) !important;
+    font-weight: 100 !important;
+}
+
+// Image previw style
+
+input#inpFile {
+    position: absolute;
+    z-index: 9999;
+    opacity: 0;
+    cursor: pointer;
+}
+
+div#imagePreview .ti-cloud-up {
+    font-size: 1.6em;
+    margin: 0 5px;
+}
+
+.image-preview {
+    margin: 0 15px;
+    min-height: 100px;
+    border: 2px solid #ddd;
+    border-radius: $radius-10;
+    overflow: hidden;
+    // default text
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #ccc;
+}
+
+.image-preview__image {
+    width: 100%;
+    display: none;
+}
+
+// notifigations groups
+#notifi_groups {
+    .modal-body {
+        background: transparent !important;
+        height: auto;
+    }
+
+    .col-lg-9 {
+        max-width: 73%;
+    }
+
+}
+
+// responsive groups page
+@media only screen and (max-width: 1200px) {
+    #groups {
+        .profile_card {
+            display: none;
+        }
+
+        .group_card {
+            display: block;
+            background: var(--bg);
+        }
+
+        #profile_nav {
+            padding-top: 10px;
+            margin-bottom: 10px;
+
+
+            li {
+                width: auto !important;
+
+                &.follow_statistics {
+                    width: 65px !important;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+
+    .home_sidebar,
+    .tab-content {
+        flex: 100%;
+        max-width: 100%;
+        width: 100%;
+        background: transparent;
+
+    }
+
+    .home_sidebar {
+        display: block;
+        position: relative;
+        padding: 0;
+    }
+
+    .card-footer,
+    .card {
+        background: transparent;
+
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    header.home_header {
+        background: -webkit-gradient(linear,
+                left top,
+                left bottom,
+                color-stop(50%, rgba(3, 2, 4, 0.45)),
+                to(transparent));
+
+        .profile_logo,
+        .right_options .s_msg_btn button {
+            background: transparent;
+        }
+    }
+
+    #groups {
+
+        .home_sidebar {
+
+            .card {
+                margin-bottom: 0;
+            }
+        }
+
+        .group_menu::-webkit-scrollbar {
+            visibility: hidden;
+        }
+
+        .group_menu {
+            display: -webkit-box;
+            padding-top: 65px;
+            overflow-y: overlay;
+
+            li {
+                width: auto;
+                margin: 0;
+                margin-left: 5px;
+                min-height: auto;
+
+                a {
+                    position: relative;
+                    width: auto;
+                    float: $left;
+                }
+            }
+        }
+
+        // groups notifigations
+        #notif .card {
+            margin-right: 5px;
+            margin-left: 5px;
+        }
+
+        #notif .card img {
+            margin: 15px 10px;
+            width: 45px;
+            max-width: 45px;
+            height: 45px;
+        }
+
+        #notif .card p {
+            max-width: 55%;
+        }
+
+    }
+
+    #mygroups>ul,
+    .timeline {
+        margin: auto;
+    }
+}

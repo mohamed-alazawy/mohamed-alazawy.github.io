@@ -1,0 +1,212 @@
+// home responsive
+// xs sreen
+.left {
+     float: $left;
+}
+
+.right {
+     float: $right;
+}
+
+.land-featurearea {
+     background: #1e3799 none repeat scroll 0 0;
+     color: #fff;
+     float: $left;
+     height: 100vh;
+     position: relative;
+     text-align: center;
+     vertical-align: middle;
+     width: 100%;
+     overflow: hidden;
+}
+
+.login_page {
+     .log-reg-area {
+          margin-top: 30%;
+     }
+}
+
+#login {
+     span {
+          display: block;
+          margin: 15px 0;
+     }
+}
+
+button#scrltobtm {
+     display: none;
+}
+
+#signup_page {
+     .carousel-inner {
+          overflow: visible !important;
+     }
+
+     ul {
+          li {
+               margin: 10px auto;
+               text-align: $left;
+               max-width: 60%;
+               background: var(--secondary-color);
+               padding: 10px 0;
+               line-height: 15px;
+               border-radius: $radius-20 0 0 $radius-20;
+          }
+
+          li.fearured {
+               background: transparent;
+               line-height: 20px;
+
+               b {
+                    position: relative;
+                    top: -10px;
+               }
+          }
+
+          i {
+               font-size: 2em;
+               margin: 0 5px;
+          }
+
+          b {
+               position: absolute;
+               top: 5px;
+          }
+     }
+}
+
+.profile_logo {
+     background: transparent;
+     padding: 0;
+     height: auto;
+
+     img {
+          @include profile_img;
+          width: 38px;
+          height: 38px;
+          float: $left;
+          margin: 0 10px;
+          border: 1px solid;
+     }
+
+     h2 {
+          font-size: $lgfont;
+     }
+
+     p {
+          margin: 0;
+          font-size: $xsfont;
+          font-weight: 100;
+     }
+}
+
+.land-meta,
+#signup_page ul {
+     position: absolute;
+     top: 50%;
+     -webkit-transform: translateY(-50%);
+     transform: translateY(-50%);
+     width: 100%;
+}
+
+.land-meta>p {
+     color: #fff;
+     letter-spacing: 0.5px;
+}
+
+.friend-logo {
+     display: inline-block;
+     width: 100%;
+}
+
+.friend-logo>span {
+     font-size: 50px;
+     position: relative;
+}
+
+.friend-logo>span::before,
+.friend-logo>span::after {
+     background: #4834d4 none repeat scroll 0 0;
+     border: 16px solid rgba(255, 255, 255, 0.1);
+     border-radius: 100%;
+     content: '';
+     height: 180px;
+     left: -42px;
+     position: absolute;
+     top: 20px;
+     width: 180px;
+     z-index: -1;
+}
+
+.log-reg-area {
+     background: var(--bg) none repeat scroll 0 0;
+     -webkit-box-shadow: 0 0 35px #e2e2e2;
+     box-shadow: 0 0 35px #e2e2e2;
+     display: block;
+     float: none;
+     left: 50%;
+     padding: 35px 55px;
+     position: absolute;
+     top: 50%;
+     margin-top: 30px;
+     -webkit-transform: translate(-50%);
+     transform: translate(-50%);
+     width: 505px;
+}
+
+.form-radio {
+     margin: 10px 0;
+     position: relative;
+     width: 100%;
+     left: -10px;
+     top: -5px;
+}
+
+.form-radio>.radio {
+     display: inline-block;
+     margin-bottom: 0;
+     width: 20%;
+}
+
+.cond_inpt {
+     display: inline-block;
+     margin: 15px auto;
+     margin-right: 10px;
+}
+
+// responsive sign up & login page
+@media only screen and (max-width: 768px) {
+     body {
+          padding: 0;
+     }
+
+     button#scrltobtm {
+          position: absolute;
+          bottom: 50px;
+          @include position_center;
+          width: 70%;
+          display: block;
+     }
+
+     .right {
+          padding: 0;
+     }
+
+     .cond_inpt {
+          display: block;
+     }
+
+     // login  
+     form#login {
+          position: relative;
+          top: 50%;
+          transform: translatey(-50%);
+
+          button {
+               display: block;
+               margin: 15px auto;
+               width: 80%;
+               opacity: .6;
+          }
+     }
+}

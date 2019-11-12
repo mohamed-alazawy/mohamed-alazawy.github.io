@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+     <title>Social App - SignUp</title>
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="css/css_plugins/bootstrap.min.css">
+
+
+     <!-- custom css -->
+     <link rel="stylesheet" href="css/sign_login.css">
+     <!-- icon fonts -->
+     <link rel="stylesheet" href="css/css_plugins/material-icons.css">
+     <link rel="stylesheet" href="css/css_plugins/themify-icons.css">
+     <link rel="stylesheet" href="css/css_plugins/all.css">
+     <link rel="stylesheet" href="css/css_plugins/fontawesome.min.css">
+
+</head>
+
+<body>
+
+     <div id="signup_page">
+
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 left">
+               <div class="row">
+                    <div class="land-featurearea">
+                         <div class="land-meta">
+
+                              <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                   <div class="carousel-inner" role="listbox">
+
+                                        <!-- Quote 1 -->
+                                        <div class="carousel-item active" data-interval="3000">
+                                             <h1>Smarapp</h1>
+                                             <p>smarapp is free to use for as long as you want with two active
+                                                  projects.</p>
+                                             <div class="friend-logo">
+                                                  <span>
+                                                       Smarapp
+                                                  </span>
+                                             </div>
+                                        </div>
+
+                                        <div class="carousel-item" data-interval="3000">
+                                             <ul>
+                                                  <li class="fearured"><i class="material-icons"> explore </i><b>-
+                                                            Explore
+                                                            -</b><br>
+                                                       Get the latest Posts, videos, and More in one
+                                                       place.
+                                                  </li>
+                                                  <li class="fearured"><i class="material-icons">restore</i><b>- Restore
+                                                            From Trash -</b><br>
+                                                       Restore Any Content Within 48 Hours
+                                                  </li>
+                                                  <li class="fearured"> <i class="material-icons"> format_paint </i><b>-
+                                                            Personalize - </b><br>
+                                                       Choose from new themes and more dark mode options.
+                                                  </li>
+                                             </ul>
+                                        </div>
+
+                                        <div class="carousel-item" data-interval="3000">
+
+                                             <ul>
+                                                  <li class="profile_logo">
+                                                       <img class="profile_img" src="img/avatar2.jpg" alt="...">
+                                                       <p> You May Know :</p>
+                                                       <h2>mohamed kitab</h2>
+                                                  </li>
+                                                  <li class="profile_logo">
+                                                       <img class="profile_img" src="img/avatar3.jpg" alt="...">
+                                                       <p> You May Know :</p>
+                                                       <h2>mohamed kitab</h2>
+                                                  </li>
+                                                  <li class="profile_logo">
+                                                       <img class="profile_img" src="img/avatar4.jpg" alt="...">
+                                                       <p> You May Know :</p>
+                                                       <h2>mohamed kitab</h2>
+                                                  </li>
+                                             </ul>
+                                        </div> <!-- .item -->
+
+                                   </div> <!-- .carousel-inner -->
+                                   <!-- Carousel nav -->
+                                   <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                   </a>
+                                   <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Next</span>
+                                   </a>
+                              </div> <!-- #my-carousel -->
+                         </div>
+                         <button id="scrltobtm">Create New Account</button>
+                    </div>
+               </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 right">
+               <div class="log-reg-area reg col-md-9">
+                    <form method="POST" action="#" class="form-wrap form-horizontal" id="md-form" autocomplete="off">
+                         <div class="row">
+                              <div class="col-md-6">
+                                   <div class="input-wrap">
+                                        <i class="far fa-user"></i>
+                                        <label for="name">First Name</label>
+                                        <input class="input" name="reg_fname" type="text" id="fname" placeholder=""
+                                             value="" require />
+                                   </div>
+                              </div>
+                              <div class="col-md-6">
+                                   <div class="input-wrap">
+                                        <i class="far fa-user"></i>
+                                        <label for="name">Last Name</label>
+                                        <input class="input" name="reg_lname" type="text" id="lname" placeholder=""
+                                             value="" require />
+                                   </div>
+                              </div>
+                              <div class="col-md-12">
+                                   <div class="input-wrap">
+                                        <i class="fa fa-user"></i>
+                                        <label for="user">User Name</label>
+                                        <input class="input" name="reg_username" type="text" id="user" value=""
+                                             require />
+                                   </div>
+                              </div>
+
+                              <div class="clearfix"></div>
+
+                              <div class="col-md-6">
+                                   <div class="input-wrap">
+                                        <i class="fas fa-lock"></i>
+                                        <label for="pass">Password</label>
+                                        <input class="input" name="reg_password" type="password" id="pass" require />
+                                        <span id="showpwd" class="fa fa-eye-slash"></span>
+                                   </div>
+                              </div>
+
+                              <div class="col-md-6">
+                                   <div class="input-wrap">
+                                        <i class="fas fa-lock"></i>
+                                        <label for="co_p">Con - Password</label>
+                                        <input class="input" name="reg_con_password" type="password" id="co_p"
+                                             require />
+                                        <span id="showpwd" class="fa fa-eye-slash"></span>
+                                   </div>
+                              </div>
+                              <div class="clearfix"></div>
+                              <div class="form-radio">
+                                   <div class="radio">
+                                        <label>
+                                             <input type="radio" name="reg_gender" value="male" checked="checked">
+                                             <i class="check-box"></i>
+                                             Male
+                                        </label>
+                                   </div>
+                                   <div class="radio">
+                                        <label>
+                                             <input type="radio" name="reg_gender" value="female">
+                                             <i class="check-box"></i>
+                                             Female
+                                        </label>
+                                   </div>
+                              </div>
+
+                              <div class="col-md-12">
+                                   <div class="input-wrap">
+                                        <i class="fas fa-at"></i>
+                                        <label for="e">E-mail</label>
+                                        <input class="input" name="reg_email" type="email" id="e" value="" require />
+                                   </div>
+                              </div>
+
+                         </div>
+
+
+                         <div class="input-wrap cond_inpt">
+                              <input type="checkbox" id="d">
+                              <label for="d">Accept Terms & Conditions ?</label>
+                         </div>
+                         <span><a id="signin" href="#">Already have an account</a></span>
+
+                         <div class="input-wrap">
+                              <button id="confirm" name="register_button" type="submit">sign up</button>
+                         </div>
+
+                    </form>
+                    <!-- end of form -->
+               </div>
+          </div>
+
+          <div class="clearfix"></div>
+     </div>
+     <!-- scripts directory -->
+     <script src="js/jquery-3.4.1.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/main.js"></script>
+
+     <script>
+          $(document).ready(function () {
+               // dark & light mode
+               var theme = document.querySelector('input[name=theme]');
+
+               theme.addEventListener('change', function () {
+                    if (this.checked) {
+                         trans();
+                         document.documentElement.setAttribute('data-theme', 'dark');
+                    } else {
+                         trans();
+                         document.documentElement.setAttribute('data-theme', 'light');
+                    }
+               });
+
+               let trans = () => {
+                    document.documentElement.classList.add('transition');
+                    window.setTimeout(() => {
+                         document.documentElement.classList.remove('transition');
+                    }, 1000);
+               };
+          });
+     </script>
+
+</body>
+
+</html>

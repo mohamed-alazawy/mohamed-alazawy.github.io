@@ -1,0 +1,1104 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <title>social app</title>
+
+     <!-- emoji plugin -->
+     <link rel="stylesheet" href="css/css_plugins/emoji.min.css">
+
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="css/css_plugins/bootstrap.min.css">
+
+
+     <!-- custom css -->
+     <link rel="stylesheet" href="css/home.css">
+     <!-- icon fonts -->
+     <link rel="stylesheet" href="css/css_plugins/material-icons.css">
+     <link rel="stylesheet" href="css/css_plugins/themify-icons.css">
+     <link rel="stylesheet" href="css/css_plugins/all.css">
+     <link rel="stylesheet" href="css/css_plugins/fontawesome.min.css">
+
+</head>
+
+<body>
+     <!-- header -->
+     <header class="home_header">
+          <a href="myprofile.html" class="profile_logo col-1">
+               <img src="img/profile.png">
+          </a>
+          <div class="right_options">
+               <div class="notif-btn">
+                    <button><i class="material-icons">notifications_none</i></button>
+               </div>
+               <a href="inbox.html" class="s_msg_btn">
+                    <button><i class="material-icons">inbox</i></button>
+               </a>
+          </div>
+     </header>
+
+     <!-- left sidebar  -->
+     <aside class="left-sidebar">
+          <form>
+               <a href="home.html" class="active"><i class="ti-home"></i></a>
+               <a href="search.html"><i class="ti-search"></i></a>
+               <div id="add_post_btn">
+                    <div class="add_post_menu">
+                         <input type="checkbox" id="toggle_addpost" />
+                         <label id="show-menu" for="toggle_addpost">
+                              <div class="btn toggleBtn">
+                                   <i class="material-icons md-36 menuBtn ti-plus"></i>
+                                   <i class="material-icons md-36 closeBtn ti-close"></i>
+                              </div>
+                              <ul class="nav nav-tabs posts_tabs" role="tablist">
+                                   <li class="btn">
+                                        <a class="active" href="#text__post" aria-selected="true" role="tab"
+                                             data-toggle="tab">
+                                             <i class="material-icons ti-text md-36"></i>
+                                        </a>
+                                   </li>
+
+                                   <li class="btn">
+                                        <a href="#images__post" aria-selected="false" role="tab" data-toggle="tab">
+                                             <i class="material-icons ti-image md-36"></i>
+                                        </a>
+                                   </li>
+
+
+                                   <li class="btn">
+                                        <a href="#videos__post" aria-selected="false" role="tab" data-toggle="tab">
+                                             <i class="material-icons ti-video-camera md-36"></i>
+                                        </a>
+                                   </li>
+
+                                   <li class="btn">
+                                        <a href="#gallery__post" aria-selected="false" role="tab" data-toggle="tab">
+                                             <i class="material-icons md-36 ti-gallery"></i>
+                                        </a>
+                                   </li>
+
+                                   <li class="btn">
+                                        <a href="#poll__post" aria-selected="false" role="tab" data-toggle="tab">
+                                             <i class="material-icons ti-bar-chart md-36"></i>
+                                        </a>
+                                   </li>
+
+                              </ul>
+                         </label>
+                    </div>
+               </div>
+               <a href="chat.html"><i class="material-icons">chat_bubble_outline</i></a>
+               <a href="groups.html"><i class="material-icons">group</i></a>
+          </form>
+     </aside>
+     <!-- add posts forms -->
+     <div class="add_posts_forms">
+          <div class="col-md-8 m-auto">
+               <form>
+                    <div class="tab-content" id="tab-content">
+                         <!-- start (text post) tab -->
+                         <div class="tab-pane fade show active in" id="text__post" aria-labelledby="text__post"
+                              role="tabpanel">
+                              <nav>
+                                   <h3>Text Post</h3>
+                                   <select id="post_status">
+                                        <option>Public</option>
+                                        <option>Followers</option>
+                                        <option>Closed Friends</option>
+                                   </select>
+                              </nav>
+                              <div class="post__body">
+                                   <input class="form-control post_title" type="text"
+                                        placeholder="Title, if you want one">
+                                   <div class="post__content">
+                                        <textarea class="post_textarea" type="text"
+                                             placeholder="Type your post here"></textarea>
+                                        <div class="emoji">Add Emoji</div>
+                                   </div>
+                                   <input type="checkbox" id="toggle_bg_color" />
+                                   <button id="toggle-colorsBtn">Background Color</button>
+                                   <label id="bg-color" for="toggle_bg_color">
+                                        <div class="colorpicker">
+                                             <div id="red"></div>
+                                        </div>
+                                        <div class="colorpicker">
+                                             <div id="orange"></div>
+                                        </div>
+                                        <div class="colorpicker">
+                                             <div id="blue"></div>
+                                        </div>
+                                        <div class="colorpicker">
+                                             <div id="green"></div>
+                                        </div>
+                                        <div class="colorpicker">
+                                             <div id="darkGraybg"></div>
+                                        </div>
+                                        <div class="colorpicker">
+                                             <div id="graybg"></div>
+                                        </div>
+                                        <div class="colorpicker">
+                                             <div id="purple"></div>
+                                        </div>
+                                   </label>
+                              </div>
+                         </div>
+                         <!-- end (text post) tab -->
+                         <!-- start (images post) tab -->
+                         <div class="tab-pane fade" id="images__post" aria-labelledby="images__post" role="tabpanel">
+                              <nav>
+                                   <h3>Image Post</h3>
+                                   <select id="post_status">
+                                        <option>Public</option>
+                                        <option>Followers</option>
+                                        <option>Closed Friends</option>
+                                   </select>
+                              </nav>
+                              <div class="post__body">
+                                   <input class="form-control post_title" type="text"
+                                        placeholder="Title, if you want one">
+                                   <div class="post__content">
+                                        <textarea class="post_textarea" type="text"
+                                             placeholder="Type your post here"></textarea>
+                                        <div class="emoji">Add Emoji</div>
+                                   </div>
+                                   <input type="file" name="image__post" id="image__post">
+                                   <button id="addFile__post">
+                                        <i class="ti-image"></i> Add Image
+                                   </button>
+                              </div>
+                         </div>
+                         <!-- end (images post) tab -->
+                         <!-- start (videos post) tab -->
+                         <div class="tab-pane fade" id="videos__post" aria-labelledby="videos__post" role="tabpanel">
+                              <nav>
+                                   <h3>Video Post</h3>
+                                   <select id="post_status">
+                                        <option>Public</option>
+                                        <option>Followers</option>
+                                        <option>Closed Friends</option>
+                                   </select>
+                              </nav>
+                              <div class="post__body">
+                                   <input class="form-control post_title" type="text"
+                                        placeholder="Title, if you want one">
+                                   <div class="post__content">
+                                        <textarea class="post_textarea" type="text"
+                                             placeholder="Type your post here"></textarea>
+                                        <div class="emoji">Add Emoji</div>
+                                   </div>
+                                   <input type="file" name="image__post" id="image__post">
+                                   <button id="addFile__post">
+                                        <i class="far fa-play-circle"></i> Add Video
+                                   </button>
+                                   <span>Video should not exceed 1 minute</span>
+                              </div>
+                         </div>
+                         <!-- end (videos post) tab -->
+                         <!-- start (gallery post) tab -->
+                         <div class="tab-pane fade" id="gallery__post" aria-labelledby="gallery__post" role="tabpanel">
+                              <nav>
+                                   <h3>Images / Videos Post</h3>
+                                   <select id="post_status">
+                                        <option>Public</option>
+                                        <option>Followers</option>
+                                        <option>Closed Friends</option>
+                                   </select>
+                              </nav>
+                              <div class="post__body">
+                                   <input class="form-control post_title" type="text"
+                                        placeholder="Title, if you want one">
+                                   <div class="post__content">
+                                        <textarea class="post_textarea" type="text"
+                                             placeholder="Type your post here"></textarea>
+                                        <div class="emoji">Add Emoji</div>
+                                   </div>
+                                   <input type="file" name="image__post" id="image__post">
+                                   <button id="addFile__post">
+                                        <i class="ti-layers-alt"></i> Add Images / Videos
+                                   </button>
+                                   <span>The number of items must not exceed 10</span>
+                              </div>
+                         </div>
+                         <!-- end (gallery post) tab -->
+                         <!-- start (poll post) tab -->
+                         <div class="tab-pane fade" id="poll__post" aria-labelledby="poll__post" role="tabpanel">
+                              <nav>
+                                   <h3>Poll Post</h3>
+                                   <select id="post_status">
+                                        <option>Public</option>
+                                        <option>Followers</option>
+                                        <option>Closed Friends</option>
+                                   </select>
+                              </nav>
+                              <div class="post__body">
+                                   <input class="form-control" type="text" id="poll_guestion"
+                                        placeholder="Type Your Question">
+
+                                   <input class="form-control" type="text" id="poll_options"
+                                        placeholder="Type Option 1 ">
+                                   <input class="form-control" type="text" id="poll_options"
+                                        placeholder="Type Option 2 ">
+                                   <input type="button" id="addpollOption" value="Remove Option">
+                                   <input type="button" id="addpollOption" value="Add Option">
+
+                                   <input type="file" name="image__post" id="image__post">
+                                   <button id="addFile__post">
+                                        <i class="ti-image"></i> Add Image
+                                   </button>
+                              </div>
+                         </div>
+                         <!-- end (poll post) tab -->
+
+                    </div>
+
+                    <!-- publish button -->
+                    <button id="publish_btn" type="submit"><i class="ti-plus"></i> publish</button>
+               </form>
+          </div>
+     </div>
+     <!--end add posts forms-->
+     <!-- right sidebar -->
+     <aside class="right-sidebar">
+          <ul>
+               <li><a href="#"><span class="online"></span><img src="img/avatar1.jpg"></a><h3>mhmd..</h3></li>
+               <li><a href="#"><img src="img/avatar2.jpg"></a><h3>mhmd..</h3></li>
+               <li><a href="#"><img src="img/avatar3.jpg"></a><h3>mhmd..</h3></li>
+               <li><a href="#"><span class="online"></span><img src="img/avatar4.jpg"></a><h3>mhmd..</h3></li>
+               <li><a href="#"><img src="img/avatar1.jpg"></a><h3>mhmd..</h3></li>
+               <li><a href="#"><span class="online"></span><img src="img/avatar2.jpg"></a><h3>mhmed..</h3></li>
+               <li><a href="#"><img src="img/avatar3.jpg"></a></li>
+               <li><a href="#"><span class="online"></span><img src="img/avatar4.jpg"></a><h3>mhmd..</h3></li>
+               <li><a href="#"><img src="img/avatar1.jpg"></a><h3>mhmd..</h3></li>
+               <li><a href="#"><img src="img/avatar2.jpg"></a><h3>mhmd..</h3></li>
+               <li><a href="#"><img src="img/avatar3.jpg"></a><h3>mhmd..</h3></li>
+               <li><a href="#"><img src="img/avatar4.jpg"></a><h3>mhmd..</h3></li>
+               <li><a href="#"><img src="img/avatar1.jpg"></a><h3>mhmd..</h3></li>
+               <li><a href="#"><img src="img/avatar2.jpg"></a><h3>mhmd..</h3></li>
+          </ul>
+          <form class="add_story">
+               <input type="file" name="add_story" />
+               <i class="material-icons">add_circle</i>
+               <img src="img/profile.png">
+               <!-- story text -->
+               <h3>Your Story</h3>
+          </form>
+     </aside>
+     <div class="clearfix"></div>
+     <!-- end sidebar  -->
+     
+     <!-- start container -->
+     <div class="container">
+          <div class="row">
+               <div class="home_sidebar globle_profile_sidebar col-md-3">
+                    <div class="card">
+
+                         <img src="img/cover.png" class="card-img-top" alt="...">
+                         <a href="#" class="edit_cover"><i class="material-icons">insert_photo</i></a>
+                         <div class="overlay"></div>
+                         <img src="img/profile.png" class="profile_img" alt="...">
+                         <a href="#" class="edit_profile"><i class="material-icons">insert_photo</i></a>
+
+                         <div class="card-body">
+                              <h2>mohamed kitab</h2>
+                              <a href="#" class="edit_name"><i class="fas fa-pencil-alt"></i></a>
+                              <h3>@youser name</h3>
+                         </div>
+                    </div>
+
+                    <div id="Suggestion_users">
+                         <div class="title">
+                              <h3>You May Know :</h3>
+                         </div>
+                         <div class="card col-12">
+                              <div class="row">
+                                   <div class="avatar left">
+                                        <img src="img/avatar1.jpg">
+                                   </div>
+                                   <div class="col-6 info left">
+                                        <h2>Mohamed Kitab</h2>
+                                        <p>City Name</p>
+                                   </div>
+                                   <div class="col-3 add_btn left">
+                                        <button id="follow_btn"><i class="ti-plus"></i>Follow</button>
+                                   </div>
+                              </div>
+                         </div>
+
+                         <div class="card col-12">
+                              <div class="row">
+                                   <div class="avatar left">
+                                        <img src="img/avatar1.jpg">
+                                   </div>
+                                   <div class="col-6 info left">
+                                        <h2>Mohamed Kitab</h2>
+                                        <p>City Name</p>
+                                   </div>
+                                   <div class="col-3 add_btn left">
+                                        <button id="follow_btn"><i class="ti-plus"></i>Follow</button>
+                                   </div>
+                              </div>
+                         </div>
+
+                         <div class="card col-12">
+                              <div class="row">
+                                   <div class="avatar left have_story">
+                                        <img src="img/avatar1.jpg">
+                                   </div>
+                                   <div class="col-6 info left">
+                                        <h2>Mohamed Kitab</h2>
+                                        <p>City Name</p>
+                                   </div>
+                                   <div class="col-3 add_btn left">
+                                        <button id="follow_btn"><i class="ti-plus"></i>Follow</button>
+                                   </div>
+                              </div>
+                         </div>
+
+                         <div class="card col-12">
+                              <div class="row">
+                                   <div class="avatar left">
+                                        <img src="img/avatar1.jpg">
+                                   </div>
+                                   <div class="col-6 info left">
+                                        <h2>Mohamed Kitab</h2>
+                                        <p>City Name</p>
+                                   </div>
+                                   <div class="col-3 add_btn left">
+                                        <button id="follow_btn"><i class="ti-plus"></i>Follow</button>
+                                   </div>
+                              </div>
+                         </div>
+                         
+                    </div>
+
+               </div>
+
+               <article class="col-md-8 ml-auto timeline">
+                    <div class="card">
+                         <div class="card-header post-info">
+                              <div class="profile_logo">
+                                   <img src="img/profile.png" alt="...">
+                                   <div class="details">
+                                        <h2>mohamed kitab</h2>
+                                        <time>3 minute ago</time>
+
+                                   </div>
+
+                              </div>
+                              <ul>
+                                   <li><a href="#"><i class="far fa-bookmark"></i></a></li>
+                                   <li><a href="#"><i class="fas fa-ellipsis-v"></i></a></li>
+                              </ul>
+                              <p class="post_content">
+                                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus modi qui alias
+                                   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae obcaecati minima
+                                   vitae! Velit, assumenda. Labore, id, dolor dolorem sint, numquam exercitationem ex
+                                   architecto mollitia quam illo sunt ut! Laudantium, illum.
+                                   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, fugit laudantium, in
+                                   officiis sit quis repudiandae fugiat dolorem sunt possimus quos suscipit vero eveniet
+                                   earum natus commodi ab! Maiores, debitis?
+                              </p>
+
+                         </div>
+                         <img src="img/ms-files.png" class="card-img-top" alt="...">
+
+                         <div class="card-post">
+
+                              <ul class="optn-btns">
+                                   <!-- comment button -->
+                                   <li>
+                                        <a href="" data-toggle="modal" data-target="#comments_modal">
+                                             <i class="ti-comment"></i></a><span>15k</span>
+                                        <!-- comments model Modal -->
+                                        <div class="modal fade" id="comments_modal" tabindex="-1" role="dialog"
+                                        aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                             <div class="modal-content">
+                                                  <div class="modal-header">
+                                                       <h5 class="modal-title" id="exampleModalScrollableTitle">
+                                                            <span class="badge badge-pill">6</span>
+                                                            Comments</h5>
+
+                                                       <div class="likes_count">
+                                                            <i class="material-icons">
+                                                                 favorite
+                                                            </i>
+                                                            <span class="badge badge-pill">333 Liked</span>
+                                                       </div>
+
+                                                       <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                       </button>
+                                                  </div>
+                                                  <div class="modal-body">
+
+                                                       <ul class="comments_container">
+
+                                                            <li class="comments_box post_user">
+                                                                 <img src="img/avatar3.jpg" alt="...">
+                                                                 <div class="comments_content">
+                                                                      <div class="comments_act">
+                                                                           <button name="like_comments"><i
+                                                                                     class="ti-heart"></i></button>
+                                                                      </div>
+                                                                      <p>Lorem, ipsum dolor sit amet consectetur
+                                                                           adipisicing elit Lorem,
+                                                                           ipsum dolor sit amet consectetur
+                                                                           adipisicing elit.</p>
+                                                                 </div>
+                                                                 <time>12:40 PM</time>
+                                                            </li>
+
+                                                            <li class="comments_box others">
+                                                                 <img src="img/profile.png" alt="...">
+                                                                 <div class="comments_content">
+                                                                      <div class="comments_act">
+                                                                           <button name="like_comments"><i
+                                                                                     class="ti-heart"></i></button>
+                                                                      </div>
+
+                                                                      <h2>ahmed kitab</h2>
+
+                                                                      <p>Lorem, ipsum dolor sit amet consectetur
+                                                                           adipisicing elit.</p>
+                                                                 </div>
+                                                                 <time>12:41 PM</time>
+                                                            </li>
+
+                                                            <li class="comments_box others">
+                                                                 <img src="img/avatar3.jpg" alt="...">
+                                                                 <div class="comments_content">
+                                                                      <div class="comments_act">
+                                                                           <button name="like_comments"><i
+                                                                                     class="ti-heart"></i></button>
+                                                                      </div>
+                                                                      <h2>mohamed</h2>
+                                                                      <p>Lorem, ipsum dolor sit amet consectetur
+                                                                           adipisicing .</p>
+                                                                 </div>
+                                                                 <time>12:40 PM</time>
+                                                            </li>
+
+                                                            <li class="comments_box others">
+                                                                 <img src="img/profile.png" alt="...">
+                                                                 <div class="comments_content">
+                                                                      <div class="comments_act">
+                                                                           <button name="like_comments"><i
+                                                                                     class="ti-heart"></i></button>
+                                                                      </div>
+
+                                                                      <h2>mohamed alazawy</h2>
+
+                                                                      <p>Lorem, ipsum dolor sit amet consectetur
+                                                                           adipisicing elit.</p>
+                                                                 </div>
+                                                                 <time>12:41 PM</time>
+                                                            </li>
+
+                                                            <li class="comments_box post_user">
+                                                                 <img src="img/avatar3.jpg" alt="...">
+                                                                 <div class="comments_content">
+                                                                      <div class="comments_act">
+                                                                           <button name="like_comments"><i
+                                                                                     class="ti-heart"></i></button>
+                                                                      </div>
+                                                                      <p>Lorem, ipsum dolor sit amet consectetur
+                                                                           adipisicing elit Lorem,
+                                                                           ipsum dolor sit amet consectetur
+                                                                           adipisicing elit.</p>
+                                                                 </div>
+                                                                 <time>12:40 PM</time>
+                                                            </li>
+
+                                                            <li class="comments_box others">
+                                                                 <img src="img/profile.png" alt="...">
+                                                                 <div class="comments_content">
+                                                                      <div class="comments_act">
+                                                                           <button name="like_comments"><i
+                                                                                     class="ti-heart"></i></button>
+                                                                      </div>
+                                                                      <h2>ahmed kitab</h2>
+
+                                                                      <p>Lorem, ipsum dolor sit amet consectetur
+                                                                           adipisicing elit.</p>
+                                                                 </div>
+                                                                 <time>12:41 PM</time>
+                                                            </li>
+
+                                                       </ul>
+
+                                                  </div>
+                                                  <div class="modal-footer">
+
+                                                       <form class="comments_form" method="">
+                                                            <div class="options_btn">
+                                                                 <button name="comment_media"><i
+                                                                           class="material-icons">
+                                                                           attachment
+                                                                      </i></button>
+                                                            </div>
+
+                                                            <textarea class="form-control" id="comment" type="text"
+                                                                 name="comment"
+                                                                 placeholder="type your comment here ..."></textarea>
+                                                            <button class="send_comment" type="submit"
+                                                                 name="send_comment"><i class="material-icons">send
+                                                                 </i></button>
+                                                       </form>
+
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        </div>
+
+
+                                   </li>
+
+                                   <li><a href="" data-toggle="modal" data-target="#secret_comments_modal">
+                                        <i class="fas fa-mask"></i>
+                                   </a><span>33</span>
+                                   <!-- secret comments modal (box) -->
+                                   <div class="modal fade" id="secret_comments_modal" tabindex="-1" role="dialog"
+                                        aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                             <div class="modal-content">
+                                                  <div class="modal-header">
+                                                       <div class="alert alert-dismissible" role="alert">
+                                                            <i class="fas fa-mask"></i><strong> Note *!</strong> Upon confidential comment, your name
+                                                            or identity will appear only to the author of the publication
+                                                       </div>
+                                                       <!-- close modal (comments box) -->
+                                                       <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                       </button>
+                                                  </div>
+                                                  <div class="modal-body">
+                                                       <ul class="comments_container">
+
+                                                            <li class="comments_box others">
+                                                                 <img src="img/profile.png" alt="...">
+                                                                 <div class="comments_content">
+                                                                      <div class="comments_act">
+                                                                           <button name="like_comments"><i
+                                                                                     class="ti-heart"></i></button>
+                                                                      </div>
+
+                                                                      <h2>Unknown User</h2>
+
+                                                                      <p>Lorem, ipsum dolor sit amet consectetur
+                                                                           adipisicing elit.</p>
+                                                                 </div>
+                                                                 <time>12:41 PM</time>
+                                                            </li>
+
+                                                            <li class="comments_box others">
+                                                                 <img src="img/profile.png" alt="...">
+                                                                 <div class="comments_content">
+                                                                      <div class="comments_act">
+                                                                           <button name="like_comments"><i
+                                                                                     class="ti-heart"></i></button>
+                                                                      </div>
+
+                                                                      <h2>Unknown User</h2>
+
+                                                                      <p>Lorem, ipsum dolor sit amet consectetur
+                                                                           adipisicing elit.</p>
+                                                                 </div>
+                                                                 <time>12:41 PM</time>
+                                                            </li>
+
+                                                            <li class="comments_box others">
+                                                                 <img src="img/profile.png" alt="...">
+                                                                 <div class="comments_content">
+                                                                      <div class="comments_act">
+                                                                           <button name="like_comments"><i
+                                                                                     class="ti-heart"></i></button>
+                                                                      </div>
+                                                                      <h2>Unknown User</h2>
+
+                                                                      <p>Lorem, ipsum dolor sit amet consectetur
+                                                                           adipisicing elit.</p>
+                                                                 </div>
+                                                                 <time>12:41 PM</time>
+                                                            </li>
+
+                                                       </ul>
+
+                                                  </div>
+                                                  <div class="modal-footer">
+                                                       <form class="comments_form" method="">
+                                                            <div class="options_btn">
+                                                                 <button name="comment_media"><i
+                                                                           class="material-icons">
+                                                                           attachment
+                                                                      </i></button>
+                                                            </div>
+
+                                                            <textarea class="form-control" id="secret_comment" type="text"
+                                                                 name="comment"
+                                                                 placeholder="type your comment here ..."></textarea>
+                                                            <button class="send_comment" type="submit"
+                                                                 name="send_comment"><i class="material-icons">send
+                                                                 </i></button>
+                                                       </form>
+
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        </div>
+                                   </li>
+
+
+                                   <li>
+                                        <a href="" data-toggle="modal" data-target="#responsive_modal">
+                                             <i class="far fa-paper-plane"></i>
+                                        </a><span>33</span>
+                                        <!-- send button modal -->
+                                        <div class="modal fade" id="responsive_modal" tabindex="-1" role="dialog"
+                                        aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                             <div class="modal-content">
+                                                  <div class="modal-header">
+
+                                                       <!-- close modal (Send modal) -->
+                                                       <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                       </button>
+                                                  </div>
+                                                  <div class="modal-body">
+                                                       <ul class="options_container">
+
+                                                            <li>
+                                                                 <a href="#">Send To Friends</a>
+                                                            </li>
+                                                            <li>
+                                                                 <a href="#">Share On Your Story</a>
+                                                            </li>
+                                                            <li>
+                                                                 <a href="#">Share On Your profile</a>
+                                                            </li>
+                                                       </ul>
+
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        </div>
+                                   </li>
+                                   <li><a href="#"><i class="ti-heart"></i></a><span>333</span></li>
+                              </ul>
+                              <ul class="location">
+                                   <li><i class="ti-location-pin"></i> Location Here</li>
+                              </ul>
+                         </div>
+               </div>
+
+               <div class="card">
+                    <div class="card-header post-info">
+                         <div class="profile_logo">
+                              <img src="img/profile.png" alt="...">
+                              <div class="details">
+                                   <h2>mohamed kitab</h2>
+                                   <time>3 minute ago</time>
+
+                              </div>
+
+                         </div>
+                         <ul>
+                              <li><a href="#"><i class="far fa-bookmark"></i></a></li>
+                              <li><a href="#"><i class="fas fa-ellipsis-v"></i></a></li>
+                         </ul>
+                         <p class="post_content">
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus modi qui alias
+                              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae obcaecati minima
+                              vitae! Velit, assumenda. Labore, id, dolor dolorem sint, numquam exercitationem ex
+                              architecto mollitia quam illo sunt ut! Laudantium, illum.
+                              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, fugit laudantium, in
+                              officiis sit quis repudiandae fugiat dolorem sunt possimus quos suscipit vero eveniet
+                              earum natus commodi ab! Maiores, debitis?
+                         </p>
+
+                    </div>
+                    <img src="img/ms-files.png" class="card-img-top" alt="...">
+
+                    <div class="card-post">
+
+                         <ul class="optn-btns">
+                              <!-- comment button -->
+                              <li>
+                                   <a href="" data-toggle="modal" data-target="#comments_modal">
+                                        <i class="ti-comment"></i></a><span>15k</span>
+                                   <!-- comments model Modal -->
+                                   <div class="modal fade" id="comments_modal" tabindex="-1" role="dialog"
+                                   aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+                                   <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                             <div class="modal-header">
+                                                  <h5 class="modal-title" id="exampleModalScrollableTitle">
+                                                       <span class="badge badge-pill">6</span>
+                                                       Comments</h5>
+
+                                                  <div class="likes_count">
+                                                       <i class="material-icons">
+                                                            favorite
+                                                       </i>
+                                                       <span class="badge badge-pill">333 Liked</span>
+                                                  </div>
+
+                                                  <button type="button" class="close" data-dismiss="modal"
+                                                       aria-label="Close">
+                                                       <span aria-hidden="true">&times;</span>
+                                                  </button>
+                                             </div>
+                                             <div class="modal-body">
+
+                                                  <ul class="comments_container">
+                                                       <li class="comments_box post_user">
+                                                            <img src="img/avatar3.jpg" alt="...">
+                                                            <div class="comments_content">
+                                                                 <div class="comments_act">
+                                                                      <button name="like_comments"><i
+                                                                                class="ti-heart"></i></button>
+                                                                 </div>
+                                                                 <p>Lorem, ipsum dolor sit amet consectetur
+                                                                      adipisicing elit Lorem,
+                                                                      ipsum dolor sit amet consectetur
+                                                                      adipisicing elit.</p>
+                                                            </div>
+                                                            <time>12:40 PM</time>
+                                                       </li>
+
+                                                       <li class="comments_box others">
+                                                            <img src="img/profile.png" alt="...">
+                                                            <div class="comments_content">
+                                                                 <div class="comments_act">
+                                                                      <button name="like_comments"><i
+                                                                                class="ti-heart"></i></button>
+                                                                 </div>
+
+                                                                 <h2>ahmed kitab</h2>
+
+                                                                 <p>Lorem, ipsum dolor sit amet consectetur
+                                                                      adipisicing elit.</p>
+                                                            </div>
+                                                            <time>12:41 PM</time>
+                                                       </li>
+
+                                                       <li class="comments_box others">
+                                                            <img src="img/avatar3.jpg" alt="...">
+                                                            <div class="comments_content">
+                                                                 <div class="comments_act">
+                                                                      <button name="like_comments"><i
+                                                                                class="ti-heart"></i></button>
+                                                                 </div>
+                                                                 <h2>mohamed</h2>
+                                                                 <p>Lorem, ipsum dolor sit amet consectetur
+                                                                      adipisicing .</p>
+                                                            </div>
+                                                            <time>12:40 PM</time>
+                                                       </li>
+
+                                                       <li class="comments_box others">
+                                                            <img src="img/profile.png" alt="...">
+                                                            <div class="comments_content">
+                                                                 <div class="comments_act">
+                                                                      <button name="like_comments"><i
+                                                                                class="ti-heart"></i></button>
+                                                                 </div>
+
+                                                                 <h2>mohamed alazawy</h2>
+
+                                                                 <p>Lorem, ipsum dolor sit amet consectetur
+                                                                      adipisicing elit.</p>
+                                                            </div>
+                                                            <time>12:41 PM</time>
+                                                       </li>
+
+                                                       <li class="comments_box post_user">
+                                                            <img src="img/avatar3.jpg" alt="...">
+                                                            <div class="comments_content">
+                                                                 <div class="comments_act">
+                                                                      <button name="like_comments"><i
+                                                                                class="ti-heart"></i></button>
+                                                                 </div>
+                                                                 <p>Lorem, ipsum dolor sit amet consectetur
+                                                                      adipisicing elit Lorem,
+                                                                      ipsum dolor sit amet consectetur
+                                                                      adipisicing elit.</p>
+                                                            </div>
+                                                            <time>12:40 PM</time>
+                                                       </li>
+
+                                                       <li class="comments_box others">
+                                                            <img src="img/profile.png" alt="...">
+                                                            <div class="comments_content">
+                                                                 <div class="comments_act">
+                                                                      <button name="like_comments"><i
+                                                                                class="ti-heart"></i></button>
+                                                                 </div>
+                                                                 <h2>ahmed kitab</h2>
+
+                                                                 <p>Lorem, ipsum dolor sit amet consectetur
+                                                                      adipisicing elit.</p>
+                                                            </div>
+                                                            <time>12:41 PM</time>
+                                                       </li>
+
+                                                  </ul>
+
+                                             </div>
+                                             <div class="modal-footer">
+
+                                                  <form class="comments_form" method="">
+                                                       <div class="options_btn">
+                                                            <button name="comment_media"><i
+                                                                      class="material-icons">
+                                                                      attachment
+                                                                 </i></button>
+                                                       </div>
+
+                                                       <textarea class="form-control" id="comment" type="text"
+                                                            name="comment"
+                                                            placeholder="type your comment here ..."></textarea>
+                                                       <button class="send_comment" type="submit"
+                                                            name="send_comment"><i class="material-icons">send
+                                                            </i></button>
+                                                  </form>
+
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+
+
+                              </li>
+
+                              
+                              <li><a href="" data-toggle="modal" data-target="#secret_comments_modal">
+                                   <i class="fas fa-mask"></i>
+                              </a><span>33</span>
+                              <!-- secret comments modal (box) -->
+                              <div class="modal fade" id="secret_comments_modal" tabindex="-1" role="dialog"
+                                   aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+                                   <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                             <div class="modal-header">
+                                                  <div class="alert alert-dismissible" role="alert">
+                                                       <i class="fas fa-mask"></i><strong> Note *!</strong> Upon confidential comment, your name
+                                                       or identity will appear only to the author of the publication
+                                                  </div>
+                                                  <!-- close modal (comments box) -->
+                                                  <button type="button" class="close" data-dismiss="modal"
+                                                       aria-label="Close">
+                                                       <span aria-hidden="true">&times;</span>
+                                                  </button>
+                                             </div>
+                                             <div class="modal-body">
+                                                  <ul class="comments_container">
+
+                                                       <li class="comments_box others">
+                                                            <img src="img/profile.png" alt="...">
+                                                            <div class="comments_content">
+                                                                 <div class="comments_act">
+                                                                      <button name="like_comments"><i
+                                                                                class="ti-heart"></i></button>
+                                                                 </div>
+
+                                                                 <h2>Unknown User</h2>
+
+                                                                 <p>Lorem, ipsum dolor sit amet consectetur
+                                                                      adipisicing elit.</p>
+                                                            </div>
+                                                            <time>12:41 PM</time>
+                                                       </li>
+
+                                                       <li class="comments_box others">
+                                                            <img src="img/profile.png" alt="...">
+                                                            <div class="comments_content">
+                                                                 <div class="comments_act">
+                                                                      <button name="like_comments"><i
+                                                                                class="ti-heart"></i></button>
+                                                                 </div>
+
+                                                                 <h2>Unknown User</h2>
+
+                                                                 <p>Lorem, ipsum dolor sit amet consectetur
+                                                                      adipisicing elit.</p>
+                                                            </div>
+                                                            <time>12:41 PM</time>
+                                                       </li>
+
+                                                       <li class="comments_box others">
+                                                            <img src="img/profile.png" alt="...">
+                                                            <div class="comments_content">
+                                                                 <div class="comments_act">
+                                                                      <button name="like_comments"><i
+                                                                                class="ti-heart"></i></button>
+                                                                 </div>
+                                                                 <h2>Unknown User</h2>
+
+                                                                 <p>Lorem, ipsum dolor sit amet consectetur
+                                                                      adipisicing elit.</p>
+                                                            </div>
+                                                            <time>12:41 PM</time>
+                                                       </li>
+
+                                                  </ul>
+
+                                             </div>
+                                             <div class="modal-footer">
+                                                  <form class="comments_form" method="">
+                                                       <div class="options_btn">
+                                                            <button name="comment_media"><i
+                                                                      class="material-icons">
+                                                                      attachment
+                                                                 </i></button>
+                                                       </div>
+
+                                                       <textarea class="form-control" id="secret_comment" type="text"
+                                                            name="comment"
+                                                            placeholder="type your comment here ..."></textarea>
+                                                       <button class="send_comment" type="submit"
+                                                            name="send_comment"><i class="material-icons">send
+                                                            </i></button>
+                                                  </form>
+
+                                             </div>
+                                        </div>
+                                   </div>
+                                   </div>
+                              </li>
+                              
+                              <li>
+                                   <a href="" data-toggle="modal" data-target="#responsive_modal">
+                                        <i class="far fa-paper-plane"></i>
+                                   </a><span>33</span>
+                                   <!-- send button modal -->
+                                   <div class="modal fade" id="responsive_modal" tabindex="-1" role="dialog"
+                                   aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+                                   <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                             <div class="modal-header">
+
+                                                  <!-- close modal (Send modal) -->
+                                                  <button type="button" class="close" data-dismiss="modal"
+                                                       aria-label="Close">
+                                                       <span aria-hidden="true">&times;</span>
+                                                  </button>
+                                             </div>
+                                             <div class="modal-body">
+                                                  <ul class="options_container">
+
+                                                       <li>
+                                                            <a href="#">Send To Friends</a>
+                                                       </li>
+                                                       <li>
+                                                            <a href="#">Share On Your Story</a>
+                                                       </li>
+                                                       <li>
+                                                            <a href="#">Share On Your profile</a>
+                                                       </li>
+                                                  </ul>
+
+                                             </div>
+                                        </div>
+                                   </div>
+                                   </div>
+                              </li>
+                              <li><a href="#"><i class="ti-heart"></i></a><span>333</span></li>
+                         </ul>
+                         <ul class="location">
+                              <li><i class="ti-location-pin"></i> Location Here</li>
+                         </ul>
+                    </div>
+          </div>
+
+               </article>
+
+          </div>
+     </div>
+     <!-- scripts directory -->
+     <script src="js/jquery-3.4.1.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/main.js"></script>
+     <script src="js/emoji.min.js"></script>
+
+     <script>
+          // emoji script (comments)
+          $(document).ready(function () {
+               $('#comment').emojioneArea({
+                    pickerPosition: "right",
+                    filtersPosition: "bottom",
+                    autocompleteTones: true,
+
+               });
+
+          });
+          // emoji script (secret_comments)
+          $(document).ready(function () {
+               $('#secret_comment').emojioneArea({
+                    pickerPosition: "right",
+                    filtersPosition: "bottom",
+                    autocompleteTones: true,
+
+               });
+
+          });
+
+            // dark & light mode
+          var theme = document.querySelector('input[name=theme]');
+
+          theme.addEventListener('change', function () {
+          if (this.checked) {
+          trans();
+          document.documentElement.setAttribute('data-theme', 'dark');
+          } else {
+          trans();
+          document.documentElement.setAttribute('data-theme', 'light');
+          }
+          });
+
+          let trans = () => {
+          document.documentElement.classList.add('transition');
+          window.setTimeout(() => {
+          document.documentElement.classList.remove('transition');
+          }, 1000);
+          };
+          // preview image before uploading
+          const inpFile = document.getElementById('inpFile');
+          const previewContainer = document.getElementById('imagePreview');
+          const previewImage = previewContainer.querySelector('.image-preview__image');
+          const previewDefautText = previewContainer.querySelector(
+          '.image-preview__default-text'
+          );
+
+          inpFile.addEventListener('change', function () {
+          const file = this.files[0];
+
+          if (file) {
+               const reader = new FileReader();
+
+               previewDefautText.style.display = 'none';
+               previewImage.style.display = 'block';
+
+               reader.addEventListener('load', function () {
+               previewImage.setAttribute('src', this.result);
+               });
+
+               reader.readAsDataURL(file);
+          } else {
+               previewDefautText.style.display = null;
+               previewImage.style.display = null;
+               previewImage.setAttribute('src', '');
+          }
+          });
+          
+     </script>
+</body>
+
+</html>

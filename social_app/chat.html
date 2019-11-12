@@ -1,0 +1,675 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+     <title>Social App - chat</title>
+
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="css/css_plugins/bootstrap.min.css">
+     <!-- custom css -->
+     <link rel="stylesheet" href="css/chat.css">
+     <!-- icon fonts -->
+     <link rel="stylesheet" href="css/css_plugins/material-icons.css">
+     <link rel="stylesheet" href="css/css_plugins/themify-icons.css">
+     <link rel="stylesheet" href="css/css_plugins/all.css">
+     <link rel="stylesheet" href="css/css_plugins/fontawesome.min.css">
+     <link rel="stylesheet" href="css/css_plugins/emoji.min.css">
+
+</head>
+
+<body>
+     <!-- header -->
+     <header class="home_header">
+          <a href="myprofile.html" class="profile_logo col-1">
+               <img src="img/profile.png">
+          </a>
+          <button id="backbtn"><i class="fas fa-arrow-left"></i></button>
+          <div class="right_options">
+               <div class="notif-btn">
+                    <button><i class="material-icons">notifications_none</i></button>
+               </div>
+               <a href="inbox.html" class="s_msg_btn">
+                    <button><i class="material-icons">inbox</i></button>
+               </a>
+          </div>
+     </header>
+
+     <!-- left sidebar  -->
+     <aside class="left-sidebar">
+          <form>
+               <a href="home.html"><i class="ti-home"></i></a>
+               <a href="search.html"><i class="ti-search"></i></a>
+               <div id="add_post_btn">
+                    <div class="add_post_menu">
+                         <input type="checkbox" id="toggle_addpost" />
+                         <label id="show-menu" for="toggle_addpost">
+                              <div class="btn toggleBtn">
+                                   <i class="material-icons md-36 menuBtn ti-plus"></i>
+                                   <i class="material-icons md-36 closeBtn ti-close"></i>
+                              </div>
+                              <ul class="nav nav-tabs posts_tabs" role="tablist">
+                                   <li class="btn">
+                                        <a class="active" href="#text__post" aria-selected="true" role="tab"
+                                             data-toggle="tab">
+                                             <i class="material-icons ti-text md-36"></i>
+                                        </a>
+                                   </li>
+
+                                   <li class="btn">
+                                        <a href="#images__post" aria-selected="false" role="tab" data-toggle="tab">
+                                             <i class="material-icons ti-image md-36"></i>
+                                        </a>
+                                   </li>
+
+
+                                   <li class="btn">
+                                        <a href="#videos__post" aria-selected="false" role="tab" data-toggle="tab">
+                                             <i class="material-icons ti-video-camera md-36"></i>
+                                        </a>
+                                   </li>
+
+                                   <li class="btn">
+                                        <a href="#gallery__post" aria-selected="false" role="tab" data-toggle="tab">
+                                             <i class="material-icons md-36 ti-gallery"></i>
+                                        </a>
+                                   </li>
+
+                                   <li class="btn">
+                                        <a href="#poll__post" aria-selected="false" role="tab" data-toggle="tab">
+                                             <i class="material-icons ti-bar-chart md-36"></i>
+                                        </a>
+                                   </li>
+
+                              </ul>
+                         </label>
+                    </div>
+               </div>
+               <a href="chat.html" class="active"><i class="material-icons">chat_bubble_outline</i></a>
+               <a href="groups.html"><i class="material-icons">group</i></a>
+          </form>
+     </aside>
+     <!-- add posts forms -->
+     <div class="add_posts_forms">
+          <div class="col-md-8 m-auto">
+               <form>
+                    <div class="tab-content" id="tab-content">
+                         <!-- start (text post) tab -->
+                         <div class="tab-pane fade show active in" id="text__post" aria-labelledby="text__post"
+                              role="tabpanel">
+                              <nav>
+                                   <h3>Text Post</h3>
+                                   <select id="post_status">
+                                        <option>Public</option>
+                                        <option>Followers</option>
+                                        <option>Closed Friends</option>
+                                   </select>
+                              </nav>
+                              <div class="post__body">
+                                   <input class="form-control post_title" type="text"
+                                        placeholder="Title, if you want one">
+                                   <div class="post__content">
+                                        <textarea class="post_textarea" type="text"
+                                             placeholder="Type your post here"></textarea>
+                                        <div class="emoji">Add Emoji</div>
+                                   </div>
+                                   <input type="checkbox" id="toggle_bg_color" />
+                                   <button id="toggle-colorsBtn">Background Color</button>
+                                   <label id="bg-color" for="toggle_bg_color">
+                                        <div class="colorpicker">
+                                             <div id="red"></div>
+                                        </div>
+                                        <div class="colorpicker">
+                                             <div id="orange"></div>
+                                        </div>
+                                        <div class="colorpicker">
+                                             <div id="blue"></div>
+                                        </div>
+                                        <div class="colorpicker">
+                                             <div id="green"></div>
+                                        </div>
+                                        <div class="colorpicker">
+                                             <div id="darkGraybg"></div>
+                                        </div>
+                                        <div class="colorpicker">
+                                             <div id="graybg"></div>
+                                        </div>
+                                        <div class="colorpicker">
+                                             <div id="purple"></div>
+                                        </div>
+                                   </label>
+                              </div>
+                         </div>
+                         <!-- end (text post) tab -->
+                         <!-- start (images post) tab -->
+                         <div class="tab-pane fade" id="images__post" aria-labelledby="images__post" role="tabpanel">
+                              <nav>
+                                   <h3>Image Post</h3>
+                                   <select id="post_status">
+                                        <option>Public</option>
+                                        <option>Followers</option>
+                                        <option>Closed Friends</option>
+                                   </select>
+                              </nav>
+                              <div class="post__body">
+                                   <input class="form-control post_title" type="text"
+                                        placeholder="Title, if you want one">
+                                   <div class="post__content">
+                                        <textarea class="post_textarea" type="text"
+                                             placeholder="Type your post here"></textarea>
+                                        <div class="emoji">Add Emoji</div>
+                                   </div>
+                                   <input type="file" name="image__post" id="image__post">
+                                   <button id="addFile__post">
+                                        <i class="ti-image"></i> Add Image
+                                   </button>
+                              </div>
+                         </div>
+                         <!-- end (images post) tab -->
+                         <!-- start (videos post) tab -->
+                         <div class="tab-pane fade" id="videos__post" aria-labelledby="videos__post" role="tabpanel">
+                              <nav>
+                                   <h3>Video Post</h3>
+                                   <select id="post_status">
+                                        <option>Public</option>
+                                        <option>Followers</option>
+                                        <option>Closed Friends</option>
+                                   </select>
+                              </nav>
+                              <div class="post__body">
+                                   <input class="form-control post_title" type="text"
+                                        placeholder="Title, if you want one">
+                                   <div class="post__content">
+                                        <textarea class="post_textarea" type="text"
+                                             placeholder="Type your post here"></textarea>
+                                        <div class="emoji">Add Emoji</div>
+                                   </div>
+                                   <input type="file" name="image__post" id="image__post">
+                                   <button id="addFile__post">
+                                        <i class="far fa-play-circle"></i> Add Video
+                                   </button>
+                                   <span>Video should not exceed 1 minute</span>
+                              </div>
+                         </div>
+                         <!-- end (videos post) tab -->
+                         <!-- start (gallery post) tab -->
+                         <div class="tab-pane fade" id="gallery__post" aria-labelledby="gallery__post" role="tabpanel">
+                              <nav>
+                                   <h3>Images / Videos Post</h3>
+                                   <select id="post_status">
+                                        <option>Public</option>
+                                        <option>Followers</option>
+                                        <option>Closed Friends</option>
+                                   </select>
+                              </nav>
+                              <div class="post__body">
+                                   <input class="form-control post_title" type="text"
+                                        placeholder="Title, if you want one">
+                                   <div class="post__content">
+                                        <textarea class="post_textarea" type="text"
+                                             placeholder="Type your post here"></textarea>
+                                        <div class="emoji">Add Emoji</div>
+                                   </div>
+                                   <input type="file" name="image__post" id="image__post">
+                                   <button id="addFile__post">
+                                        <i class="ti-layers-alt"></i> Add Images / Videos
+                                   </button>
+                                   <span>The number of items must not exceed 10</span>
+                              </div>
+                         </div>
+                         <!-- end (gallery post) tab -->
+                         <!-- start (poll post) tab -->
+                         <div class="tab-pane fade" id="poll__post" aria-labelledby="poll__post" role="tabpanel">
+                              <nav>
+                                   <h3>Poll Post</h3>
+                                   <select id="post_status">
+                                        <option>Public</option>
+                                        <option>Followers</option>
+                                        <option>Closed Friends</option>
+                                   </select>
+                              </nav>
+                              <div class="post__body">
+                                   <input class="form-control" type="text" id="poll_guestion"
+                                        placeholder="Type Your Question">
+
+                                   <input class="form-control" type="text" id="poll_options"
+                                        placeholder="Type Option 1 ">
+                                   <input class="form-control" type="text" id="poll_options"
+                                        placeholder="Type Option 2 ">
+                                   <input type="button" id="addpollOption" value="Remove Option">
+                                   <input type="button" id="addpollOption" value="Add Option">
+
+                                   <input type="file" name="image__post" id="image__post">
+                                   <button id="addFile__post">
+                                        <i class="ti-image"></i> Add Image
+                                   </button>
+                              </div>
+                         </div>
+                         <!-- end (poll post) tab -->
+
+                    </div>
+
+                    <!-- publish button -->
+                    <button id="publish_btn" type="submit"><i class="ti-plus"></i> publish</button>
+               </form>
+          </div>
+     </div>
+     <!--end add posts forms-->
+     <!-- right sidebar -->
+     <aside class="right-sidebar">
+          <ul>
+               <li><a href="#"><span class="online"></span><img src="img/avatar1.jpg"></a></li>
+               <li><a href="#"><img src="img/avatar2.jpg"></a></li>
+
+               <li><a href="#"><img src="img/avatar3.jpg"></a></li>
+               <li><a href="#"><span class="online"></span><img src="img/avatar4.jpg"></a></li>
+               <li><a href="#"><img src="img/avatar1.jpg"></a></li>
+               <li><a href="#"><span class="online"></span><img src="img/avatar2.jpg"></a></li>
+               <li><a href="#"><img src="img/avatar3.jpg"></a></li>
+               <li><a href="#"><span class="online"></span><img src="img/avatar4.jpg"></a></li>
+               <li><a href="#"><img src="img/avatar1.jpg"></a></li>
+               <li><a href="#"><img src="img/avatar2.jpg"></a></li>
+               <li><a href="#"><img src="img/avatar3.jpg"></a></li>
+               <li><a href="#"><img src="img/avatar4.jpg"></a></li>
+               <li><a href="#"><img src="img/avatar1.jpg"></a></li>
+               <li><a href="#"><img src="img/avatar2.jpg"></a></li>
+          </ul>
+          <form class="add_story">
+               <input type="file" name="add_story" />
+               <i class="material-icons">add_circle</i>
+               <img src="img/profile.png">
+          </form>
+     </aside>
+     <div class="clearfix"></div>
+     <!-- end sidebar  -->
+     <!-- start container -->
+     <div class="container">
+          <div class="row">
+               <div class="page_panel">
+                    <div class="sidebar_panel col-3">
+                         <div class="chat_header">
+                              <span class="opt_icon"></span>
+                              <form class="chat_search">
+                                   <input class=" form-control" type="search" name="chat_search"
+                                        placeholder="Chat Search">
+                              </form>
+                         </div>
+                         <div class="clearfix"></div>
+                         <div class="row">
+                              <ul class="nav nav-tabs chat_tabs" role="tablist">
+                                   <li><a class="active" href="#users_chats" aria-selected="true" role="tab"
+                                             data-toggle="tab"><i class="far fa-user-circle"></i></a>
+                                   </li>
+
+                                   <li><a href="#group_chats" aria-selected="false" role="tab" data-toggle="tab"><i
+                                                  class="fas fa-users"></i></a></li>
+
+                                   <li>
+                                        <a href="#saved_msg" aria-selected="false" role="tab" data-toggle="tab">
+                                             <i class="fas fa-bookmark"></i>
+                                        </a>
+                                   </li>
+
+                              </ul>
+                         </div>
+                         <ul class="chat_body">
+                              <div class="row">
+                                   <div class="tab-content">
+                                        <div class="tab-pane fade show active in" id="users_chats"
+                                             aria-labelledby="users_chats" role="tabpanel">
+
+                                             <li class="active_chat">
+                                                  <button type="button" class="open_options">
+                                                       <i class="fas fa-ellipsis-v"></i>
+                                                  </button>
+                                                  <form class="talk_options left col-7">
+                                                       <button type="button"><i class="ti-pin"></i></button>
+                                                       <button type="button"><i class="ti-bell"></i></button>
+                                                       <button type="button"><i class="ti-pencil"></i></button>
+                                                       <button type="button"><i class="ti-trash"></i></button>
+                                                  </form>
+                                                  <div class="chat_user right col-7">
+                                                       <img src="img/profile.png" alt="...">
+                                                       <h2>mohamed kitab</h2>
+                                                       <p> <span>You : </span>last message here ...</p>
+                                                       <span class="badge">4</span>
+                                                       <time>12:35 AM</time>
+                                                  </div>
+
+                                             </li>
+
+                                             <li>
+                                                  <button type="button" class="open_options">
+                                                       <i class="fas fa-ellipsis-v"></i>
+                                                  </button>
+                                                  <form class="talk_options left col-7">
+                                                       <button type="button"><i class="ti-pin"></i></button>
+                                                       <button type="button"><i class="ti-bell"></i></button>
+                                                       <button type="button"><i class="ti-pencil"></i></button>
+                                                       <button type="button"><i class="ti-trash"></i></button>
+                                                  </form>
+                                                  <div class="chat_user right col-7">
+                                                       <img src="img/avatar1.jpg" alt="...">
+                                                       <h2>mohamed kitab</h2>
+                                                       <p> <span>You : </span>last message here ...</p>
+                                                       <time>12:35 AM</time>
+                                                  </div>
+
+                                             </li>
+
+                                             <li>
+                                                  <button type="button" class="open_options">
+                                                       <i class="fas fa-ellipsis-v"></i>
+                                                  </button>
+                                                  <form class="talk_options left col-7">
+                                                       <button type="button"><i class="ti-pin"></i></button>
+                                                       <button type="button"><i class="ti-bell"></i></button>
+                                                       <button type="button"><i class="ti-pencil"></i></button>
+                                                       <button type="button"><i class="ti-trash"></i></button>
+                                                  </form>
+                                                  <div class="chat_user right col-7">
+                                                       <img src="img/avatar2.jpg" alt="...">
+                                                       <h2>mohamed kitab</h2>
+                                                       <p> <span>You : </span>last message here ...</p>
+                                                       <time>12:35 AM</time>
+                                                  </div>
+
+                                             </li>
+                                             <li>
+                                                  <button type="button" class="open_options">
+                                                       <i class="fas fa-ellipsis-v"></i>
+                                                  </button>
+                                                  <form class="talk_options left col-7">
+                                                       <button type="button"><i class="ti-pin"></i></button>
+                                                       <button type="button"><i class="ti-bell"></i></button>
+                                                       <button type="button"><i class="ti-pencil"></i></button>
+                                                       <button type="button"><i class="ti-trash"></i></button>
+                                                  </form>
+                                                  <div class="chat_user right col-7">
+                                                       <img src="img/avatar3.jpg" alt="...">
+                                                       <h2>mohamed kitab</h2>
+                                                       <p> <span>You : </span>last message here ...</p>
+                                                       <time>12:35 AM</time>
+                                                  </div>
+
+                                             </li>
+
+                                        </div>
+
+
+                                        <div class="tab-pane fade" id="group_chats" aria-labelledby="group_chats"
+                                             role="tabpanel">
+                                             <li class="active_chat">
+                                                  <button type="button" class="open_options">
+                                                       <i class="fas fa-ellipsis-v"></i>
+                                                  </button>
+                                                  <form class="talk_options left col-7">
+                                                       <button type="button"><i class="ti-pin"></i></button>
+                                                       <button type="button"><i class="ti-bell"></i></button>
+                                                       <button type="button"><i class="ti-pencil"></i></button>
+                                                       <button type="button"><i class="ti-trash"></i></button>
+                                                  </form>
+                                                  <div class="chat_user right col-7">
+                                                       <img src="img/profile.png" alt="...">
+                                                       <h2>group name 1</h2>
+                                                       <p> <span>You : </span>last message here ...</p>
+                                                       <span class="badge">4</span>
+                                                       <time>12:35 AM</time>
+                                                  </div>
+
+                                             </li>
+                                             <li>
+                                                  <button type="button" class="open_options">
+                                                       <i class="fas fa-ellipsis-v"></i>
+                                                  </button>
+                                                  <form class="talk_options left col-7">
+                                                       <button type="button"><i class="ti-pin"></i></button>
+                                                       <button type="button"><i class="ti-bell"></i></button>
+                                                       <button type="button"><i class="ti-pencil"></i></button>
+                                                       <button type="button"><i class="ti-trash"></i></button>
+                                                  </form>
+                                                  <div class="chat_user right col-7">
+                                                       <img src="img/profile.png" alt="...">
+                                                       <h2>group name 2</h2>
+                                                       <p> <span>You : </span>last message here ...</p>
+                                                       <span class="badge">4</span>
+                                                       <time>12:35 AM</time>
+                                                  </div>
+
+                                             </li>
+                                        </div>
+
+
+
+                                        <div class="tab-pane fade" id="saved_msg" aria-labelledby="saved_msg"
+                                             role="tabpanel">
+                                             <li class="active_chat">
+                                                  <button type="button" class="open_options">
+                                                       <i class="fas fa-ellipsis-v"></i>
+                                                  </button>
+                                                  <form class="talk_options left col-7">
+                                                       <button type="button"><i class="ti-pin"></i></button>
+                                                  </form>
+                                                  <div class="chat_user right col-7">
+                                                       <i class="fas fa-bookmark bookmark"></i>
+                                                       <h2>Saved Message</h2>
+                                                       <time>12:35 AM</time>
+                                                  </div>
+
+                                             </li>
+                                        </div>
+
+                                   </div>
+                              </div>
+                         </ul>
+                    </div>
+
+                    <article class="col-9 chat_box">
+                         <div class="row">
+                              <nav class="chat_nav">
+                                   <ul class="chat_user">
+                                        <li class="user_info">
+                                             <img src="img/profile.png" alt="...">
+                                             <a>ahmed kitab</a>
+                                             <span class="online_dot"></span>
+                                             <h6>online</h6>
+                                        </li>
+                                        <li class="call_info">
+                                             <button><i class="fas fa-phone"></i></button>
+                                             <button><i class="fas fa-video"></i></button>
+                                             <button class="open_profile"><i class="fas fa-columns"></i></button>
+                                        </li>
+
+                                   </ul>
+
+                              </nav>
+                              <ul class="chat_content">
+                                   <!-- user informations -->
+                                   <div class="overlay"></div>
+                                   <div class="user_information globle_profile_sidebar ">
+                                        <div class="card">
+                                             <img src="img/cover.png" class="card-img-top" alt="...">
+                                             <div class="overlay"></div>
+
+                                             <img src="img/profile.png" class="profile_img" alt="...">
+
+                                             <div class="card-body">
+                                                  <h2>mohamed kitab</h2>
+                                                  <h3>@youser name</h3>
+                                             </div>
+                                             <div class="card-footer">
+                                                  <form>
+                                                       <button><i class="ti-bell"></i> Notifigations</button>
+                                                  </form>
+
+                                                  <form>
+                                                       <h3>Media in this Chat</h3>
+                                                       <ul class="media">
+                                                            <div class="row">
+                                                                 <li class="col-4"><a href=""><img
+                                                                                src="img/post-img.jpg"></a>
+                                                                 </li>
+                                                                 <li class="col-4"><a href=""><img
+                                                                                src="img/post-img.jpg"></a>
+                                                                 </li>
+                                                                 <li class="col-4"><a href=""><img
+                                                                                src="img/post-img.jpg"></a>
+                                                                 </li>
+                                                                 <li class="col-4"><a href=""><img
+                                                                                src="img/post-img.jpg"></a>
+                                                                 </li>
+                                                                 <li class="col-4"><a href=""><img
+                                                                                src="img/post-img.jpg"></a>
+                                                                 </li>
+                                                                 <li class="col-4"><a href=""><img
+                                                                                src="img/post-img.jpg"></a>
+                                                                 </li>
+                                                            </div>
+                                                       </ul>
+                                                  </form>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <!-- pinned message -->
+                                   <div class="pinned_msg">
+                                        <div class="alert alert-warning alert-dismissible slide show" role="alert">
+                                             <strong><i class="fas fa-thumbtack"></i>Pinned Message</strong>
+                                             <p>
+                                                  This Message is Panned Top .. Lorem ipsum dolor sit amet
+                                                  consectetur adipisicing elit.
+                                             </p>
+                                             <button type="button" class="close" data-dismiss="alert"
+                                                  aria-label="Close">
+                                                  <span aria-hidden="true">&times;</span>
+                                             </button>
+                                        </div>
+                                   </div>
+
+
+                                   <li class="msg_box sender">
+                                        <img src="img/avatar3.jpg" alt="...">
+                                        <div class="msg_content">
+                                             <div class="msg_act">
+                                                  <button name="save_msg"><i class="far fa-bookmark"></i></button>
+                                                  <button name="like_msg"><i class="far fa-heart"></i></button>
+                                             </div>
+                                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit Lorem,
+                                                  ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                        </div>
+                                        <time>12:40 PM</time>
+                                   </li>
+
+                                   <li class="msg_box received">
+                                        <img src="img/profile.png" alt="...">
+                                        <div class="msg_content">
+                                             <div class="msg_act">
+                                                  <button name="save_msg"><i class="far fa-bookmark"></i></button>
+                                                  <button name="like_msg"><i class="far fa-heart"></i></button>
+                                             </div>
+
+                                             <h2>ahmed kitab</h2>
+
+                                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                        </div>
+                                        <time>12:41 PM</time>
+                                   </li>
+
+                                   <li class="msg_box sender">
+                                        <img src="img/avatar3.jpg" alt="...">
+                                        <div class="msg_content">
+                                             <div class="msg_act">
+                                                  <button name="save_msg"><i class="far fa-bookmark"></i></button>
+                                                  <button name="like_msg"><i class="far fa-heart"></i></button>
+                                             </div>
+                                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing .</p>
+                                        </div>
+                                        <time>12:40 PM</time>
+                                   </li>
+
+                                   <li class="msg_box received">
+                                        <img src="img/profile.png" alt="...">
+                                        <div class="msg_content">
+                                             <div class="msg_act">
+                                                  <button name="save_msg"><i class="far fa-bookmark"></i></button>
+                                                  <button name="like_msg"><i class="far fa-heart"></i></button>
+                                             </div>
+
+                                             <h2>ahmed kitab</h2>
+
+                                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                        </div>
+                                        <time>12:41 PM</time>
+                                   </li>
+
+                                   <li class="msg_box sender">
+                                        <img src="img/avatar3.jpg" alt="...">
+                                        <div class="msg_content">
+                                             <div class="msg_act">
+                                                  <button name="save_msg"><i class="far fa-bookmark"></i></button>
+                                                  <button name="like_msg"><i class="far fa-heart"></i></button>
+                                             </div>
+                                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit Lorem,
+                                                  ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                        </div>
+                                        <time>12:40 PM</time>
+                                   </li>
+
+                                   <li class="msg_box received">
+                                        <img src="img/profile.png" alt="...">
+                                        <div class="msg_content">
+                                             <div class="msg_act">
+                                                  <button name="save_msg"><i class="far fa-bookmark"></i></button>
+                                                  <button name="like_msg"><i class="far fa-heart"></i></button>
+                                             </div>
+
+                                             <h2>ahmed kitab</h2>
+
+                                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                        </div>
+                                        <time>12:41 PM</time>
+                                   </li>
+
+                              </ul>
+
+                              <nav class="chat_nav bottom">
+                                   <form class="chat_form" method="">
+                                        <div class="options_btn">
+                                             <button name="chat_media"><i class="material-icons">
+                                                       attachment
+                                                  </i></button>
+                                             <button name="chat_voice"><i class="fas fa-microphone-alt"></i></button>
+                                        </div>
+
+                                        <textarea class="form-control" id="chat" type="text" name="chat"
+                                             placeholder="type your message ..."></textarea>
+                                        <button class="send_msg" type="submit" name="send_msg"><i
+                                                  class="material-icons">send
+                                             </i></button>
+                                   </form>
+                              </nav>
+
+
+                         </div>
+
+               </div>
+
+               </article>
+          </div>
+     </div>
+
+     </div>
+     </div>
+     <!-- scripts directory -->
+     <script src="js/jquery-3.4.1.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/main.js"></script>
+     <script src="js/emoji.min.js"></script>
+
+
+</body>
+
+</html>

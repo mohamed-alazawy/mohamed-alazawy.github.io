@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <title>social app - inbox</title>
+
+     <!-- emoji plugin -->
+     <link rel="stylesheet" href="css/css_plugins/emoji.min.css">
+
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="css/css_plugins/bootstrap.min.css">
+
+
+     <!-- custom css -->
+     <link rel="stylesheet" href="css/inbox.css">
+     <!-- emoji plugin -->
+     <link rel="stylesheet" href="css/css_plugins/emoji.min.css">
+     <!-- icon fonts -->
+     <link rel="stylesheet" href="css/css_plugins/material-icons.css">
+     <link rel="stylesheet" href="css/css_plugins/themify-icons.css">
+     <link rel="stylesheet" href="css/css_plugins/all.css">
+     <link rel="stylesheet" href="css/css_plugins/fontawesome.min.css">
+
+</head>
+
+<body>
+     <!-- header -->
+     <header class="home_header">
+          <a href="myprofile.html" class="profile_logo col-1">
+               <img src="img/profile.png">
+          </a>
+          <div class="right_options">
+               <div class="notif-btn">
+                    <button><i class="material-icons">notifications_none</i></button>
+               </div>
+               <a href="inbox.html" class="s_msg_btn">
+                    <button><i class="material-icons">inbox</i></button>
+               </a>
+          </div>
+     </header>
+
+     <!-- left sidebar  -->
+     <aside class="left-sidebar">
+          <form>
+               <a href="home.html"><i class="ti-home"></i></a>
+               <a href="search.html"><i class="ti-search"></i></a>
+               <div id="add_post_btn">
+                    <div class="add_post_menu">
+                         <input type="checkbox" id="toggle_addpost" />
+                         <label id="show-menu" for="toggle_addpost">
+                              <div class="btn toggleBtn">
+                                   <i class="material-icons md-36 menuBtn ti-plus"></i>
+                                   <i class="material-icons md-36 closeBtn ti-close"></i>
+                              </div>
+                              <ul class="nav nav-tabs posts_tabs" role="tablist">
+                                   <li class="btn">
+                                        <a class="active" href="#text__post" aria-selected="true" role="tab"
+                                             data-toggle="tab">
+                                             <i class="material-icons ti-text md-36"></i>
+                                        </a>
+                                   </li>
+
+                                   <li class="btn">
+                                        <a href="#images__post" aria-selected="false" role="tab" data-toggle="tab">
+                                             <i class="material-icons ti-image md-36"></i>
+                                        </a>
+                                   </li>
+
+
+                                   <li class="btn">
+                                        <a href="#videos__post" aria-selected="false" role="tab" data-toggle="tab">
+                                             <i class="material-icons ti-video-camera md-36"></i>
+                                        </a>
+                                   </li>
+
+                                   <li class="btn">
+                                        <a href="#gallery__post" aria-selected="false" role="tab" data-toggle="tab">
+                                             <i class="material-icons md-36 ti-gallery"></i>
+                                        </a>
+                                   </li>
+
+                                   <li class="btn">
+                                        <a href="#poll__post" aria-selected="false" role="tab" data-toggle="tab">
+                                             <i class="material-icons ti-bar-chart md-36"></i>
+                                        </a>
+                                   </li>
+
+                              </ul>
+                         </label>
+                    </div>
+               </div>
+               <a href="chat.html"><i class="material-icons">chat_bubble_outline</i></a>
+               <a href="groups.html"><i class="material-icons">group</i></a>
+          </form>
+     </aside>
+     <!-- add posts forms -->
+     <div class="add_posts_forms">
+          <div class="col-md-8 m-auto">
+               <form>
+                    <div class="tab-content" id="tab-content">
+                         <!-- start (text post) tab -->
+                         <div class="tab-pane fade show active in" id="text__post" aria-labelledby="text__post"
+                              role="tabpanel">
+                              <nav>
+                                   <h3>Text Post</h3>
+                                   <select id="post_status">
+                                        <option>Public</option>
+                                        <option>Followers</option>
+                                        <option>Closed Friends</option>
+                                   </select>
+                              </nav>
+                              <div class="post__body">
+                                   <input class="form-control post_title" type="text"
+                                        placeholder="Title, if you want one">
+                                   <div class="post__content">
+                                        <textarea class="post_textarea" type="text"
+                                             placeholder="Type your post here"></textarea>
+                                        <div class="emoji">Add Emoji</div>
+                                   </div>
+                                   <input type="checkbox" id="toggle_bg_color" />
+                                   <button id="toggle-colorsBtn">Background Color</button>
+                                   <label id="bg-color" for="toggle_bg_color">
+                                        <div class="colorpicker">
+                                             <div id="red"></div>
+                                        </div>
+                                        <div class="colorpicker">
+                                             <div id="orange"></div>
+                                        </div>
+                                        <div class="colorpicker">
+                                             <div id="blue"></div>
+                                        </div>
+                                        <div class="colorpicker">
+                                             <div id="green"></div>
+                                        </div>
+                                        <div class="colorpicker">
+                                             <div id="darkGraybg"></div>
+                                        </div>
+                                        <div class="colorpicker">
+                                             <div id="graybg"></div>
+                                        </div>
+                                        <div class="colorpicker">
+                                             <div id="purple"></div>
+                                        </div>
+                                   </label>
+                              </div>
+                         </div>
+                         <!-- end (text post) tab -->
+                         <!-- start (images post) tab -->
+                         <div class="tab-pane fade" id="images__post" aria-labelledby="images__post" role="tabpanel">
+                              <nav>
+                                   <h3>Image Post</h3>
+                                   <select id="post_status">
+                                        <option>Public</option>
+                                        <option>Followers</option>
+                                        <option>Closed Friends</option>
+                                   </select>
+                              </nav>
+                              <div class="post__body">
+                                   <input class="form-control post_title" type="text"
+                                        placeholder="Title, if you want one">
+                                   <div class="post__content">
+                                        <textarea class="post_textarea" type="text"
+                                             placeholder="Type your post here"></textarea>
+                                        <div class="emoji">Add Emoji</div>
+                                   </div>
+                                   <input type="file" name="image__post" id="image__post">
+                                   <button id="addFile__post">
+                                        <i class="ti-image"></i> Add Image
+                                   </button>
+                              </div>
+                         </div>
+                         <!-- end (images post) tab -->
+                         <!-- start (videos post) tab -->
+                         <div class="tab-pane fade" id="videos__post" aria-labelledby="videos__post" role="tabpanel">
+                              <nav>
+                                   <h3>Video Post</h3>
+                                   <select id="post_status">
+                                        <option>Public</option>
+                                        <option>Followers</option>
+                                        <option>Closed Friends</option>
+                                   </select>
+                              </nav>
+                              <div class="post__body">
+                                   <input class="form-control post_title" type="text"
+                                        placeholder="Title, if you want one">
+                                   <div class="post__content">
+                                        <textarea class="post_textarea" type="text"
+                                             placeholder="Type your post here"></textarea>
+                                        <div class="emoji">Add Emoji</div>
+                                   </div>
+                                   <input type="file" name="image__post" id="image__post">
+                                   <button id="addFile__post">
+                                        <i class="far fa-play-circle"></i> Add Video
+                                   </button>
+                                   <span>Video should not exceed 1 minute</span>
+                              </div>
+                         </div>
+                         <!-- end (videos post) tab -->
+                         <!-- start (gallery post) tab -->
+                         <div class="tab-pane fade" id="gallery__post" aria-labelledby="gallery__post" role="tabpanel">
+                              <nav>
+                                   <h3>Images / Videos Post</h3>
+                                   <select id="post_status">
+                                        <option>Public</option>
+                                        <option>Followers</option>
+                                        <option>Closed Friends</option>
+                                   </select>
+                              </nav>
+                              <div class="post__body">
+                                   <input class="form-control post_title" type="text"
+                                        placeholder="Title, if you want one">
+                                   <div class="post__content">
+                                        <textarea class="post_textarea" type="text"
+                                             placeholder="Type your post here"></textarea>
+                                        <div class="emoji">Add Emoji</div>
+                                   </div>
+                                   <input type="file" name="image__post" id="image__post">
+                                   <button id="addFile__post">
+                                        <i class="ti-layers-alt"></i> Add Images / Videos
+                                   </button>
+                                   <span>The number of items must not exceed 10</span>
+                              </div>
+                         </div>
+                         <!-- end (gallery post) tab -->
+                         <!-- start (poll post) tab -->
+                         <div class="tab-pane fade" id="poll__post" aria-labelledby="poll__post" role="tabpanel">
+                              <nav>
+                                   <h3>Poll Post</h3>
+                                   <select id="post_status">
+                                        <option>Public</option>
+                                        <option>Followers</option>
+                                        <option>Closed Friends</option>
+                                   </select>
+                              </nav>
+                              <div class="post__body">
+                                   <input class="form-control" type="text" id="poll_guestion"
+                                        placeholder="Type Your Question">
+
+                                   <input class="form-control" type="text" id="poll_options"
+                                        placeholder="Type Option 1 ">
+                                   <input class="form-control" type="text" id="poll_options"
+                                        placeholder="Type Option 2 ">
+                                   <input type="button" id="addpollOption" value="Remove Option">
+                                   <input type="button" id="addpollOption" value="Add Option">
+
+                                   <input type="file" name="image__post" id="image__post">
+                                   <button id="addFile__post">
+                                        <i class="ti-image"></i> Add Image
+                                   </button>
+                              </div>
+                         </div>
+                         <!-- end (poll post) tab -->
+
+                    </div>
+
+                    <!-- publish button -->
+                    <button id="publish_btn" type="submit"><i class="ti-plus"></i> publish</button>
+               </form>
+          </div>
+     </div>
+     <!--end add posts forms-->
+     <!-- right sidebar -->
+     <aside class="right-sidebar">
+          <ul>
+               <li><a href="#"><span class="online"></span><img src="img/avatar1.jpg"></a></li>
+               <li><a href="#"><img src="img/avatar2.jpg"></a></li>
+
+               <li><a href="#"><img src="img/avatar3.jpg"></a></li>
+               <li><a href="#"><span class="online"></span><img src="img/avatar4.jpg"></a></li>
+               <li><a href="#"><img src="img/avatar1.jpg"></a></li>
+               <li><a href="#"><span class="online"></span><img src="img/avatar2.jpg"></a></li>
+               <li><a href="#"><img src="img/avatar3.jpg"></a></li>
+               <li><a href="#"><span class="online"></span><img src="img/avatar4.jpg"></a></li>
+               <li><a href="#"><img src="img/avatar1.jpg"></a></li>
+               <li><a href="#"><img src="img/avatar2.jpg"></a></li>
+               <li><a href="#"><img src="img/avatar3.jpg"></a></li>
+               <li><a href="#"><img src="img/avatar4.jpg"></a></li>
+               <li><a href="#"><img src="img/avatar1.jpg"></a></li>
+               <li><a href="#"><img src="img/avatar2.jpg"></a></li>
+          </ul>
+          <form class="add_story">
+               <input type="file" name="add_story" />
+               <i class="material-icons">add_circle</i>
+               <img src="img/profile.png">
+
+               <h3>Your Story</h3>
+          </form>
+     </aside>
+     <div class="clearfix"></div>
+     <!-- end sidebar  -->
+
+     <div class="container">
+          <div class="row">
+               <div class="page_panel col-10">
+                    <h2>Secret messages</h2>
+                    <h6>Share Your Link</h6>
+                    <form>
+                         <textarea class="form-control" disabled id="sec_link"
+                              readonly> https://example.com/mohamedalazawy93/inbox </textarea>
+                         <button class="copy_btn" onclick="copylink();">Copy</button>
+                         <ul class="sec_btns">
+                              <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                         </ul>
+                    </form>
+                    <article id="scr_msgs">
+                         <div class="card">
+                              <div class="header-btns">
+                                   <time><i class="ti-timer"></i> 15 minute ago</time>
+                                   <button class="delete"><i class="ti-trash"></i></button>
+                                   <button class="like"><i class="ti-heart"></i></button>
+                              </div>
+
+                              <p>
+                                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt pariatur dicta placeat
+                                   necessitatibus aut! Sunt nam, quisquam consequuntur voluptas dolore dicta voluptate.
+                              </p>
+                              <!-- share message btn -->
+                              <div class="card-footer">
+                                   <ul>
+                                        <li><button><i class="fas fa-share-alt"></i> Share</button></li>
+                                        <!-- replay button  -->
+                                        <li><button type="button" class="scr_msg_btn" data-toggle="modal"
+                                                  data-target="#scrMsg"><i class="fas fa-share"></i> Replay</button>
+                                        </li>
+                                        <!-- replay Modal -->
+                                        <div class="modal fade" id="scrMsg" tabindex="-1" role="dialog"
+                                             aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                             <div class="modal-dialog" role="document">
+                                                  <div class="modal-content">
+                                                       <div class="modal-header">
+                                                            <h3>Replay To THis Message</h3>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                 aria-label="Close">
+                                                                 <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                       </div>
+                                                       <div class="modal-body">
+                                                            <form>
+                                                                 <textarea class="scr_msg_content" id="scr_msg_content"
+                                                                      type="text" rows="4"
+                                                                      placeholder="be honest in your message ..."></textarea>
+                                                       </div>
+                                                       <div class="modal-footer">
+                                                            <div style="margin: 0 auto;">
+                                                                 <button type="button" class="close_btn"
+                                                                      data-dismiss="modal">Cancel</button>
+                                                                 <button type="submit" class="send_btn">Send</button>
+                                                            </div>
+                                                            </form>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <!-- end replay button  -->
+                                   </ul>
+                              </div>
+                         </div>
+
+                         <div class="card replaied">
+                              <div class="header-btns">
+                                   <time><i class="ti-timer"></i> 15 minute ago</time>
+                                   <button class="delete"><i class="ti-trash"></i></button>
+                                   <button class="like"><i class="ti-heart"></i></button>
+                              </div>
+                              <p>
+                                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt pariatur dicta placeat
+                                   necessitatibus aut! Sunt nam, quisquam consequuntur voluptas dolore dicta voluptate.
+                              </p>
+                              <!-- share message btn -->
+                              <div class="card-footer">
+                                   <ul>
+                                        <p class="replaied">
+                                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus
+                                             possimus nam reprehenderit quod amet atque minus voluptatum fugiat
+                                             quibusdam dolores voluptate ab soluta eaque, distinctio perspiciatis eum
+                                             illum fuga laboriosam.
+                                        </p>
+                                        <time><i class="ti-timer"></i> 15 minute ago</time>
+                                        <li><button><i class="fas fa-share-alt"></i> Share </button></li>
+                                   </ul>
+                              </div>
+                         </div>
+                         <!---->
+                         <div class="card">
+                              <div class="header-btns">
+                                   <time><i class="ti-timer"></i> 15 minute ago</time>
+                                   <button class="delete"><i class="ti-trash"></i></button>
+                                   <button class="like"><i class="ti-heart"></i></button>
+                              </div>
+
+                              <p>
+                                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt pariatur dicta placeat
+                                   necessitatibus aut! Sunt nam, quisquam consequuntur voluptas dolore dicta voluptate.
+                              </p>
+                              <!-- share message btn -->
+                              <div class="card-footer">
+                                   <ul>
+                                        <li><button><i class="fas fa-share-alt"></i> Share </button></li>
+                                        <li><button><i class="fas fa-share"></i> Replay</button></li>
+                                   </ul>
+                              </div>
+                         </div>
+                         <!---->
+                         <div class="card">
+                              <div class="header-btns">
+                                   <time><i class="ti-timer"></i> 15 minute ago</time>
+                                   <button class="delete"><i class="ti-trash"></i></button>
+                                   <button class="like"><i class="ti-heart"></i></button>
+                              </div>
+
+                              <p>
+                                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt pariatur dicta placeat
+                                   necessitatibus aut! Sunt nam, quisquam consequuntur voluptas dolore dicta voluptate.
+                              </p>
+                              <!-- share message btn -->
+                              <div class="card-footer">
+                                   <ul>
+                                        <li><button><i class="fas fa-share-alt"></i> Share </button></li>
+                                        <li><button><i class="fas fa-share"></i> Replay</button></li>
+                                   </ul>
+                              </div>
+                         </div>
+                    </article>
+
+
+               </div>
+          </div>
+     </div>
+
+
+
+     <!-- scripts directory -->
+     <script src="js/jquery-3.4.1.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/main.js"></script>
+     <script src="js/emoji.min.js"></script>
+
+     <script>
+          // Copy Inbox Link Function
+          const sec_link = document.getElementById("sec_link");
+          const copy_btn = document.getElementById("copy_btn");
+
+          function copylink() {
+               // step 1 - Select the text
+               sec_link.select();
+               // step 2 - copy the text
+               document.execCommand("Copy");
+          };
+          /////////////// emoji //////////////////////////
+          $(document).ready(function () {
+
+               $('#scr_msg_content').emojioneArea({
+                    pickerPosition: 'center',
+                    filtersPosition: 'bottom',
+                    autocompleteTones: true
+               });
+
+               // dark & light mode
+               var theme = document.querySelector('input[name=theme]');
+
+               theme.addEventListener('change', function () {
+                    if (this.checked) {
+                         trans();
+                         document.documentElement.setAttribute('data-theme', 'dark');
+                    } else {
+                         trans();
+                         document.documentElement.setAttribute('data-theme', 'light');
+                    }
+               });
+
+               let trans = () => {
+                    document.documentElement.classList.add('transition');
+                    window.setTimeout(() => {
+                         document.documentElement.classList.remove('transition');
+                    }, 1000);
+               };
+          });
+     </script>
+</body>
+
+</html>

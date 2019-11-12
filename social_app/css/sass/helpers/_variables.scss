@@ -1,0 +1,70 @@
+$styleLang: en;
+
+// colors variables (light mode)
+html {
+  --bg: #fcfcfc;
+  --bg-panel: #edf2f6;
+  --primary-color: #6441a1;
+  --secondary-color: #4834d4;
+  --dark-color: #54358a;
+  --gradient: 0deg, rgba(100, 65, 161, 0.48) 50%, transparent;
+  --simple-gray: #bbbaba;
+  --light-gray: #f5f5f5;
+  --dark-gray: #999;
+  --color-text: #333333;
+  --white-color-text: #fff;
+  --border-color: rgba(204, 204, 204, 0.25);
+}
+
+// colors variables (dark mode)
+html[data-theme='dark'] {
+  --bg: #0b0a2a;
+  --bg-panel: #212040;
+  --primary-color: #6441a1;
+  --secondary-color: #4834d4;
+  --dark-color: #54358a;
+  --gradient: 0deg, rgba(100, 65, 161, 0.48) 50%, transparent;
+  --simple-gray: #bbbaba;
+  --light-gray: #302f54;
+  --dark-gray: #999;
+  --color-text: #eee;
+  --white-color-text: #fff;
+  --border-color: rgba(29, 33, 36, 0.3);
+
+  // secret message card
+  article#scr_msgs {
+    border-color: #302f54 !important;
+  }
+}
+
+body {
+  background-color: var(--bg-panel);
+}
+
+// colors
+$primaryColor: #6441a1;
+$dprimaryColor: #54358a;
+$secondaryColor: #a178df;
+$gradient: 0deg, rgba(100, 65, 161, 0.48) 50%, transparent;
+$gray: rgba(237, 242, 246, 0.23);
+$darkGray: rgba(248, 248, 248, 0.95);
+
+// fonts size variables
+$lgfont: 1.2em;
+$smfont: 1em;
+$mdfont: 0.9em;
+$xsfont: 0.8em;
+// ==================
+$barwidth: 65px;
+$barhight: 100vh;
+
+//float (ltr)
+$left: left;
+$right: right;
+$ltr: ltr;
+$rtl: rtl;
+
+//radius variables
+$radius-10: 15px;
+$radius-20: 20px;
+$circle: 50%;

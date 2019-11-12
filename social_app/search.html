@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <title>Social App - Search</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+  <!-- emoji plugin -->
+  <link rel="stylesheet" href="css/css_plugins/emoji.min.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/css_plugins/bootstrap.min.css">
+
+
+  <!-- custom css -->
+  <link rel="stylesheet" href="css/search.css">
+  <!-- icon fonts -->
+  <link rel="stylesheet" href="css/css_plugins/material-icons.css">
+  <link rel="stylesheet" href="css/css_plugins/themify-icons.css">
+  <link rel="stylesheet" href="css/css_plugins/all.css">
+  <link rel="stylesheet" href="css/css_plugins/fontawesome.min.css">
+</head>
+
+<body>
+  <!-- header -->
+  <header class="home_header">
+    <a href="myprofile.html" class="profile_logo col-1">
+      <img src="img/profile.png">
+    </a>
+    <div class="right_options">
+      <div class="notif-btn">
+        <button><i class="material-icons">notifications_none</i></button>
+      </div>
+      <a href="inbox.html" class="s_msg_btn">
+        <button><i class="material-icons">inbox</i></button>
+      </a>
+    </div>
+  </header>
+
+  <!-- left sidebar  -->
+  <aside class="left-sidebar">
+    <form>
+      <a href="home.html"><i class="ti-home"></i></a>
+      <a href="search.html" class="active"><i class="ti-search"></i></a>
+      <div id="add_post_btn">
+           <div class="add_post_menu">
+                <input type="checkbox" id="toggle_addpost" />
+                <label id="show-menu" for="toggle_addpost">
+                     <div class="btn toggleBtn">
+                          <i class="material-icons md-36 menuBtn ti-plus"></i>
+                          <i class="material-icons md-36 closeBtn ti-close"></i>
+                     </div>
+                     <ul class="nav nav-tabs posts_tabs" role="tablist">
+                          <li class="btn">
+                               <a class="active" href="#text__post" aria-selected="true" role="tab"
+                                    data-toggle="tab">
+                                    <i class="material-icons ti-text md-36"></i>
+                               </a>
+                          </li>
+
+                          <li class="btn">
+                               <a href="#images__post" aria-selected="false" role="tab" data-toggle="tab">
+                                    <i class="material-icons ti-image md-36"></i>
+                               </a>
+                          </li>
+
+
+                          <li class="btn">
+                               <a href="#videos__post" aria-selected="false" role="tab" data-toggle="tab">
+                                    <i class="material-icons ti-video-camera md-36"></i>
+                               </a>
+                          </li>
+
+                          <li class="btn">
+                               <a href="#gallery__post" aria-selected="false" role="tab" data-toggle="tab">
+                                    <i class="material-icons md-36 ti-gallery"></i>
+                               </a>
+                          </li>
+
+                          <li class="btn">
+                               <a href="#poll__post" aria-selected="false" role="tab" data-toggle="tab">
+                                    <i class="material-icons ti-bar-chart md-36"></i>
+                               </a>
+                          </li>
+
+                     </ul>
+                </label>
+           </div>
+      </div>
+      <a href="chat.html"><i class="material-icons">chat_bubble_outline</i></a>
+      <a href="groups.html"><i class="material-icons">group</i></a>
+ </form>
+  </aside>
+  <!-- add posts forms -->
+  <div class="add_posts_forms">
+    <div class="col-md-8 m-auto">
+         <form>
+              <div class="tab-content" id="tab-content">
+                   <!-- start (text post) tab -->
+                   <div class="tab-pane fade show active in" id="text__post" aria-labelledby="text__post"
+                        role="tabpanel">
+                        <nav>
+                             <h3>Text Post</h3>
+                             <select id="post_status">
+                                  <option>Public</option>
+                                  <option>Followers</option>
+                                  <option>Closed Friends</option>
+                             </select>
+                        </nav>
+                        <div class="post__body">
+                             <input class="form-control post_title" type="text"
+                                  placeholder="Title, if you want one">
+                             <div class="post__content">
+                                  <textarea class="post_textarea" type="text"
+                                       placeholder="Type your post here"></textarea>
+                                  <div class="emoji">Add Emoji</div>
+                             </div>
+                             <input type="checkbox" id="toggle_bg_color" />
+                             <button id="toggle-colorsBtn">Background Color</button>
+                             <label id="bg-color" for="toggle_bg_color">
+                                  <div class="colorpicker">
+                                       <div id="red"></div>
+                                  </div>
+                                  <div class="colorpicker">
+                                       <div id="orange"></div>
+                                  </div>
+                                  <div class="colorpicker">
+                                       <div id="blue"></div>
+                                  </div>
+                                  <div class="colorpicker">
+                                       <div id="green"></div>
+                                  </div>
+                                  <div class="colorpicker">
+                                       <div id="darkGraybg"></div>
+                                  </div>
+                                  <div class="colorpicker">
+                                       <div id="graybg"></div>
+                                  </div>
+                                  <div class="colorpicker">
+                                       <div id="purple"></div>
+                                  </div>
+                             </label>
+                        </div>
+                   </div>
+                   <!-- end (text post) tab -->
+                   <!-- start (images post) tab -->
+                   <div class="tab-pane fade" id="images__post" aria-labelledby="images__post" role="tabpanel">
+                        <nav>
+                             <h3>Image Post</h3>
+                             <select id="post_status">
+                                  <option>Public</option>
+                                  <option>Followers</option>
+                                  <option>Closed Friends</option>
+                             </select>
+                        </nav>
+                        <div class="post__body">
+                             <input class="form-control post_title" type="text"
+                                  placeholder="Title, if you want one">
+                             <div class="post__content">
+                                  <textarea class="post_textarea" type="text"
+                                       placeholder="Type your post here"></textarea>
+                                  <div class="emoji">Add Emoji</div>
+                             </div>
+                             <input type="file" name="image__post" id="image__post">
+                             <button id="addFile__post">
+                                  <i class="ti-image"></i> Add Image
+                             </button>
+                        </div>
+                   </div>
+                   <!-- end (images post) tab -->
+                   <!-- start (videos post) tab -->
+                   <div class="tab-pane fade" id="videos__post" aria-labelledby="videos__post" role="tabpanel">
+                        <nav>
+                             <h3>Video Post</h3>
+                             <select id="post_status">
+                                  <option>Public</option>
+                                  <option>Followers</option>
+                                  <option>Closed Friends</option>
+                             </select>
+                        </nav>
+                        <div class="post__body">
+                             <input class="form-control post_title" type="text"
+                                  placeholder="Title, if you want one">
+                             <div class="post__content">
+                                  <textarea class="post_textarea" type="text"
+                                       placeholder="Type your post here"></textarea>
+                                  <div class="emoji">Add Emoji</div>
+                             </div>
+                             <input type="file" name="image__post" id="image__post">
+                             <button id="addFile__post">
+                                  <i class="far fa-play-circle"></i> Add Video
+                             </button>
+                             <span>Video should not exceed 1 minute</span>
+                        </div>
+                   </div>
+                   <!-- end (videos post) tab -->
+                   <!-- start (gallery post) tab -->
+                   <div class="tab-pane fade" id="gallery__post" aria-labelledby="gallery__post" role="tabpanel">
+                        <nav>
+                             <h3>Images / Videos Post</h3>
+                             <select id="post_status">
+                                  <option>Public</option>
+                                  <option>Followers</option>
+                                  <option>Closed Friends</option>
+                             </select>
+                        </nav>
+                        <div class="post__body">
+                             <input class="form-control post_title" type="text"
+                                  placeholder="Title, if you want one">
+                             <div class="post__content">
+                                  <textarea class="post_textarea" type="text"
+                                       placeholder="Type your post here"></textarea>
+                                  <div class="emoji">Add Emoji</div>
+                             </div>
+                             <input type="file" name="image__post" id="image__post">
+                             <button id="addFile__post">
+                                  <i class="ti-layers-alt"></i> Add Images / Videos
+                             </button>
+                             <span>The number of items must not exceed 10</span>
+                        </div>
+                   </div>
+                   <!-- end (gallery post) tab -->
+                   <!-- start (poll post) tab -->
+                   <div class="tab-pane fade" id="poll__post" aria-labelledby="poll__post" role="tabpanel">
+                        <nav>
+                             <h3>Poll Post</h3>
+                             <select id="post_status">
+                                  <option>Public</option>
+                                  <option>Followers</option>
+                                  <option>Closed Friends</option>
+                             </select>
+                        </nav>
+                        <div class="post__body">
+                             <input class="form-control" type="text" id="poll_guestion"
+                                  placeholder="Type Your Question">
+
+                             <input class="form-control" type="text" id="poll_options"
+                                  placeholder="Type Option 1 ">
+                             <input class="form-control" type="text" id="poll_options"
+                                  placeholder="Type Option 2 ">
+                             <input type="button" id="addpollOption" value="Remove Option">
+                             <input type="button" id="addpollOption" value="Add Option">
+
+                             <input type="file" name="image__post" id="image__post">
+                             <button id="addFile__post">
+                                  <i class="ti-image"></i> Add Image
+                             </button>
+                        </div>
+                   </div>
+                   <!-- end (poll post) tab -->
+
+              </div>
+
+              <!-- publish button -->
+              <button id="publish_btn" type="submit"><i class="ti-plus"></i> publish</button>
+         </form>
+    </div>
+</div>
+<!--end add posts forms-->
+  <!-- right sidebar -->
+  <aside class="right-sidebar">
+    <ul>
+      <li><a href="#"><span class="online"></span><img src="img/avatar1.jpg"></a></li>
+      <li><a href="#"><img src="img/avatar2.jpg"></a></li>
+
+      <li><a href="#"><img src="img/avatar3.jpg"></a></li>
+      <li><a href="#"><span class="online"></span><img src="img/avatar4.jpg"></a></li>
+      <li><a href="#"><img src="img/avatar1.jpg"></a></li>
+      <li><a href="#"><span class="online"></span><img src="img/avatar2.jpg"></a></li>
+      <li><a href="#"><img src="img/avatar3.jpg"></a></li>
+      <li><a href="#"><span class="online"></span><img src="img/avatar4.jpg"></a></li>
+      <li><a href="#"><img src="img/avatar1.jpg"></a></li>
+      <li><a href="#"><img src="img/avatar2.jpg"></a></li>
+      <li><a href="#"><img src="img/avatar3.jpg"></a></li>
+      <li><a href="#"><img src="img/avatar4.jpg"></a></li>
+      <li><a href="#"><img src="img/avatar1.jpg"></a></li>
+      <li><a href="#"><img src="img/avatar2.jpg"></a></li>
+    </ul>
+    <form class="add_story">
+      <input type="file" name="add_story" />
+      <i class="material-icons">add_circle</i>
+      <img src="img/profile.png">
+    </form>
+  </aside>
+  <div class="clearfix"></div>
+  <!-- end sidebar  -->
+  <div class="container">
+    <div class="row">
+      <div class="page_panel col-12">
+        <div class="sreach-form">
+          <form>
+            <input class="form-control" type="search" placeholder="Type Here Search Words & Click Enter..." />
+
+            <ul>
+              <li><a href="#">
+                  <input type="checkbox" id="ppl">
+                  <label for="ppl" class="label">
+                    <svg viewBox="-9 -9 43 35.191" width="25" height="15">
+                      <path id="check-icon" d=" M 0 9 Q 8 17 8 17 Q 8 17 25 0" fill="none" stroke-width="6"
+                        stroke="rgb(0,0,0)" stroke-linecap="round" />
+                    </svg>
+                  </label>
+                  People
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <input type="checkbox" id="posts">
+                  <label for="posts" class="label">
+                    <svg viewBox="-9 -9 43 35.191" width="25" height="15">
+                      <path id="check-icon" d=" M 0 9 Q 8 17 8 17 Q 8 17 25 0" fill="none" stroke-width="6"
+                        stroke="rgb(0,0,0)" stroke-linecap="round" />
+                    </svg>
+                  </label>
+                  Posts</a>
+              </li>
+              <li>
+                <a href="#">
+                  <input type="checkbox" id="groups">
+                  <label for="groups" class="label">
+                    <svg viewBox="-9 -9 43 35.191" width="25" height="15">
+                      <path id="check-icon" d=" M 0 9 Q 8 17 8 17 Q 8 17 25 0" fill="none" stroke-width="6"
+                        stroke="#fff" stroke-linecap="round" />
+                    </svg>
+                  </label>
+                  Groups
+                </a>
+              </li>
+            </ul>
+          </form>
+
+          <div class="search-content">
+            <!-- نتائج البحث تظهر هنا  -->
+          </div>
+          <div class="custom_search">
+            <form name="custom_search">
+              <div class="row">
+                <div class="col-md-6 left">
+                  <label>Select Age</label>
+                  <select class="by_age_min form-control" name="by_age_min">
+                    <option>- Select Minimum Age -</option>
+                    <option>18</option>
+                    <option>19</option>
+                    <option>20</option>
+                    <option>21</option>
+                    <option>22</option>
+                    <option>23</option>
+                    <option>24</option>
+                    <option>25</option>
+                    <option>26</option>
+                    <option>27</option>
+                    <option>28</option>
+                    <option>29</option>
+                    <option>30</option>
+                  </select>
+                  <select class="by_age_max form-control" name="by_age_max">
+                    <option>Select Maximum Age</option>
+                    <option>18</option>
+                    <option>19</option>
+                    <option>20</option>
+                    <option>21</option>
+                    <option>22</option>
+                    <option>23</option>
+                    <option>24</option>
+                    <option>25</option>
+                    <option>26</option>
+                    <option>27</option>
+                    <option>28</option>
+                    <option>29</option>
+                    <option>30</option>
+                  </select>
+                </div>
+
+                <div class="col-md-6 right">
+                  <label>Select City Or University</label>
+                  <select class="by_university form-control" name="by_university">
+                    <option>- Select University -</option>
+                    <option>College Of Fine Arts</option>
+                    <option>Cairo University</option>
+                    <option>Baghdad University</option>
+                    <option>College Of Fine Arts</option>
+                    <option>Cairo University</option>
+                    <option>Baghdad University</option>
+                    <option>College Of Fine Arts</option>
+                    <option>Cairo University</option>
+                    <option>Baghdad University</option>
+                  </select>
+                  <select class="by_city form-control" name="by_city">
+                    <option>Select City</option>
+                    <option>Baghdad</option>
+                    <option>Cairo</option>
+                    <option>Baghdad</option>
+                    <option>Cairo</option>
+                    <option>Baghdad</option>
+                    <option>Cairo</option>
+                    <option>Baghdad</option>
+                    <option>Cairo</option>
+                    <option>Baghdad</option>
+                    <option>Cairo</option>
+                  </select>
+                </div>
+
+              </div>
+
+              <input type="submit" class="btn right" value="Search">
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- scripts directory -->
+  <script src="js/jquery-3.4.1.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/emoji.min.js"></script>
+  <script>
+          $(document).ready(function () {
+               // dark & light mode
+          var theme = document.querySelector('input[name=theme]');
+
+          theme.addEventListener('change', function () {
+          if (this.checked) {
+          trans();
+          document.documentElement.setAttribute('data-theme', 'dark');
+          } else {
+          trans();
+          document.documentElement.setAttribute('data-theme', 'light');
+          }
+          });
+
+          let trans = () => {
+          document.documentElement.classList.add('transition');
+          window.setTimeout(() => {
+          document.documentElement.classList.remove('transition');
+          }, 1000);
+          };
+          });
+  </script>
+</body>
+
+</html>

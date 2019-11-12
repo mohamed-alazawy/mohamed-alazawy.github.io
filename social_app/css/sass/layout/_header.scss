@@ -1,0 +1,58 @@
+header.home_header {
+     background: var(--primary-color);
+     height: $barwidth;
+     position: fixed;
+     width: 100%;
+     z-index: 999;
+
+     .profile_logo {
+          text-align: center;
+          max-width: $barwidth;
+          padding: 12px 0;
+          height: $barwidth;
+          float: $left;
+          background: var(--dark-color);
+
+          i {
+               color: var(--white-color-text);
+               padding-top: 8px;
+          }
+
+          img {
+               @include profile_img;
+               border: 1px solid var(--secondary-color);
+          }
+     }
+
+     .right_options {
+          float: $right;
+
+
+          .s_msg_btn {
+               display: inline-block;
+               float: $right;
+
+               button {
+                    text-align: center;
+                    max-width: $barwidth;
+                    height: $barwidth;
+                    background: var(--dark-color);
+                    width: $barwidth;
+               }
+          }
+
+          .notif-btn {
+               display: inline-block;
+               margin: 15px 10px;
+          }
+
+          button {
+               background: transparent;
+               border: 0;
+               font-size: 1.2em;
+               color: var(--white-color-text);
+          }
+     }
+
+
+}

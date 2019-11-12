@@ -1,0 +1,218 @@
+h6 {
+  color: var(--color-text);
+}
+::-webkit-scrollbar-track {
+  box-shadow: index 0 0 0 rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 65, 161, 0.41);
+  border-radius: 50px;
+}
+.modal-dialog {
+  height: 91vh !important;
+}
+// inbox page style
+.page_panel {
+  margin: 0 auto;
+  text-align: center;
+  overflow: overlay;
+
+  h2 {
+    padding: 15px 0;
+    margin: 0;
+    font-size: $lgfont;
+    color: var(--primary-color);
+  }
+}
+
+// social share
+textarea#sec_link {
+  text-align: center;
+  max-width: 80%;
+  border-radius: $radius-20;
+  margin: 0 auto 10px;
+  height: calc(2.25rem + 2px);
+}
+
+button.copy_btn,
+.sec_btns li a {
+  background: var(--secondary-color);
+  color: var(--white-color-text);
+  opacity: 0.5;
+
+  &:hover {
+    opacity: 0.8;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+button.copy_btn {
+  padding: 3px 10px;
+  border: 0;
+  border-radius: $radius-20;
+}
+
+.sec_btns {
+  display: inline-flex;
+
+  li {
+    margin: 0 5px;
+
+    a {
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      display: block;
+      text-align: center;
+      border-radius: $circle;
+    }
+  }
+}
+
+// secret messenger content
+article#scr_msgs {
+  margin: 30px 10px;
+}
+
+.replaied {
+  border-color: var(--secondary-color);
+}
+
+.card {
+  margin: 15px 0;
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--bg);
+  border-color: #ccc;
+  .header-btns {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 2px;
+    width: 100%;
+    padding: 0 15px;
+    button {
+      background: transparent;
+      border: 0;
+      font-size: $xsfont;
+      padding: 0 3px;
+      opacity: 0.5;
+      float: $right;
+      &:hover {
+        opacity: 1;
+        @include transition;
+      }
+    }
+  }
+  p {
+    font-size: $mdfont;
+    color: var(--dark-gray);
+    padding: 15px;
+    padding-top: 25px;
+    text-align: $left;
+    margin: 0;
+  }
+  .header-btns,
+  .card-footer {
+    time {
+      display: inline-block;
+      text-align: $left;
+      float: $left;
+      font-size: $mdfont;
+      color: var(--dark-gray);
+      opacity: 0.5;
+      i.ti-timer {
+        font-weight: bolder;
+      }
+    }
+  }
+  .card-footer {
+    background: var(--bg-panel);
+    padding: 15px;
+
+    p.replaied {
+      color: var(--secondary-color);
+      font-size: $xsfont;
+      border-left: 2px solid;
+      display: inline-block;
+      padding: 10px;
+      margin: 0;
+      float: $left;
+      text-align: $left;
+      opacity: 0.7;
+    }
+
+    ul {
+      text-align: $right;
+      display: block;
+      overflow: hidden;
+
+      li {
+        margin: 0 5px;
+        display: inline-block;
+
+        button {
+          color: var(--secondary-color);
+          border-color: var(--secondary-color);
+          background: transparent;
+          padding: 2px 8px;
+          border-radius: $radius-20;
+          font-size: $xsfont;
+          opacity: 0.7;
+
+          &:hover {
+            opacity: 1;
+            background: var(--secondary-color);
+            color: var(--white-color-text);
+            transition: all 0.3s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+}
+#scrMsg .emojionearea .emojionearea-picker {
+  top: 35px !important;
+}
+#scrMsg .emojionearea .emojionearea-editor {
+  min-height: 100px !important;
+  text-align: $left !important;
+}
+// responsive style
+@media only screen and (max-width: 768px) {
+  .page_panel {
+    margin: 10px 0 0 0;
+    width: 100%;
+    max-width: 100%;
+    flex: 100%;
+    height: auto;
+    border-radius: $radius-20 $radius-20 0 0;
+  }
+
+  textarea#sec_link {
+    max-width: 100%;
+  }
+
+  article#scr_msgs {
+    margin: 30px 0;
+  }
+
+  .card-footer ul {
+    text-align: center;
+  }
+
+  p.replaied {
+    max-width: 100%;
+    margin: 10px 0;
+  }
+}
+
+// reset style for post button
+#add_post_btn {
+  line-height: 7px !important;
+}

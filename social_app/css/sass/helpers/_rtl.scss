@@ -1,0 +1,485 @@
+// html arabic lang (right to left style)
+@if $styleLang==arabic {
+  $left: right;
+  $right: left;
+  $rtl: ltr;
+  $ltr: rtl;
+
+  // start home style ==========================================
+  // global sidebar (home sidebar)
+  .globle_profile_sidebar {
+    right: 7% !important;
+  }
+  // Suggestion users
+  div#Suggestion_users .card {
+    .avatar {
+      margin-right: 15px !important;
+      margin-left: 0 !important;
+    }
+    .add_btn {
+      button {
+        i {
+          margin-left: 5px !important;
+          margin-right: 0 !important;
+          float: right;
+          margin-top: 4px !important;
+        }
+      }
+    }
+  }
+  // article content
+  @media only screen and (max-width: 1101px) and (min-width: 990px) {
+    .timeline {
+      max-width: 90%;
+      width: 90%;
+      flex: 90%;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+  }
+  article.timeline {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
+
+  // bar left & right position
+  aside.left-sidebar form {
+    right: 0 !important;
+    left: auto !important;
+
+    button.active,
+    a.active {
+      border-left: 2px solid !important;
+      border-right: 0 !important;
+    }
+  }
+
+  aside.right-sidebar ul,
+  form.add_story,
+  .pinned_msg .close,
+  #edit_profile_form .input-wrap:before,
+  #signup_page .input-wrap:before,
+  button.close {
+    left: 0 !important;
+    right: auto !important;
+
+    direction: $rtl;
+  }
+  aside > ul li span.online {
+    left: 15px !important;
+    right: auto !important;
+  }
+  form.add_story {
+    i {
+      left: 0 !important;
+      right: auto !important;
+    }
+  }
+
+  ul.location {
+    li {
+      padding-right: 0 !important;
+      padding-left: 10px !important;
+    }
+
+    i {
+      margin-right: 0 !important;
+      margin-left: 5px !important;
+    }
+  }
+  // secret comments
+  #secret_comments_modal {
+    .modal-header {
+      button {
+        right: auto !important;
+        left: 15px !important;
+      }
+    }
+  }
+  // comments
+  .comments_container .others .comments_content .comments_act {
+    left: auto !important;
+    right: 15px !important;
+  }
+
+  .comments_container .post_user .comments_content .comments_act,
+  .chat_user span.badge,
+  .chat_user time {
+    left: 15px !important;
+    right: auto !important;
+  }
+  .modal-header .alert i.fa-mask,
+  .modal-header .alert strong {
+    margin-left: 5px !important;
+    margin-right: 0 !important;
+  }
+  // end home style ==========================================
+  // start chat style ==========================================
+
+  .sidebar_panel {
+    border-left: 1px solid var(--border-color);
+    border-right: 0 !important;
+  }
+
+  .chat_box .chat_content .pinned_msg .alert strong,
+  .comments_box .chat_content .pinned_msg .alert strong {
+    margin-left: 10px !important;
+    margin-right: 0 !important;
+
+    i {
+      margin-left: 5px !important;
+      margin-right: 0 !important;
+    }
+  }
+  .user_information {
+    right: auto !important;
+    left: -270px !important;
+  }
+  .chat_content .open {
+    right: auto !important;
+    left: 0 !important;
+  }
+  ///////////////////////////////////////////
+  button.open_options {
+    left: auto !important;
+    right: 0 !important;
+    border-left: 0 !important;
+    border-right: 1px solid var(--border-color) !important;
+  }
+
+  .chat_body {
+    li.open_opts {
+      .chat_user {
+        right: auto !important;
+        left: -160px !important;
+      }
+
+      button.open_options {
+        left: auto !important;
+        right: 160px !important;
+      }
+    }
+  }
+
+  .chat_user {
+    left: 0 !important;
+    right: auto !important;
+  }
+
+  .talk_options {
+    transform: rotateY(180deg);
+
+    button {
+      transform: rotateY(180deg);
+    }
+  }
+
+  #notif .card p span {
+    margin-left: 5px !important;
+    margin-right: 0 !important;
+  }
+
+  .alert-dismissible {
+    padding-right: 1.25rem !important;
+    padding-left: 4rem !important;
+  }
+
+  .chat_box .chat_content .sender .msg_content .msg_act,
+  .comments_box .chat_content .sender .msg_content .msg_act {
+    right: 15px !important;
+    left: auto !important;
+  }
+
+  // start profile
+  header .profile_menu li span:before,
+  header .profile_menu li span:after {
+    left: auto !important;
+    right: 0 !important;
+  }
+
+  .sidebar_panel #profile_nav a.active,
+  .card .card-footer p.replaied {
+    border-right: 2px solid !important;
+    border-left: 0 !important;
+  }
+
+  .sidebar_panel #profile_nav li:nth-child(1),
+  #edit_profile_form label,
+  #signup_page label,
+  #greate_new label {
+    right: 25px !important;
+    left: auto !important;
+  }
+  .posts_container .post_box div#like_btn button {
+    left: auto !important;
+    right: 10px !important;
+  }
+  .posts_container .post_box div#saved_btn button {
+    left: auto !important;
+    right: 40px !important;
+  }
+  #edit_profile_form .input-wrap:before,
+  #signup_page .input-wrap:before,
+  #greate_new .input-wrap:before {
+    right: auto;
+    left: 0;
+  }
+
+  .sidebar_panel #profile_nav li:nth-child(2),
+  #edit_profile_form .input-wrap span#showpwd,
+  #signup_page .input-wrap span#showpwd {
+    left: 25px !important;
+    right: auto !important;
+  }
+
+  .modal-header .close {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  #edit_profile img.profile_img {
+    left: auto !important;
+    right: 3% !important;
+  }
+
+  #edit_profile .card .edit_profile {
+    right: 75px !important;
+    left: auto !important;
+  }
+
+  #edit_profile .card .edit_cover,
+  #notif .card time {
+    right: auto !important;
+    left: 10px !important;
+  }
+
+  #scrMsg .emojionearea .emojionearea-picker {
+    right: 0 !important;
+    left: auto !important;
+  }
+// perspective search forms
+.search-wrapper {
+    right: auto!important;
+    left: 0!important;
+  
+  .input {
+    right: auto!important;
+    left: 13px!important;  
+  }
+
+  
+  .btn {
+    right: auto!important;
+    left: 15px!important;      
+  }
+  
+  .input.active {
+    right: auto!important;
+    left: 15px!important;
+    // right: 50px;
+  }
+  
+  .btn.animate {
+  transform: rotate(360deg)!important;
+  // right: 51px;
+  }
+}
+  // search page
+  // search button
+  .card-header #search_btn {
+    left: 10px !important;
+    right: auto !important;
+  }
+  ////////////////
+  .sreach-form ul a {
+    padding-left: 15px !important;
+    padding-right: 25px !important;
+
+    input[type='checkbox'] + .label::before {
+      left: auto !important;
+      right: -15px !important;
+    }
+
+    input[type='checkbox'] + .label svg {
+      left: auto !important;
+      right: -18px !important;
+    }
+
+    input[type='checkbox'] + .label::after {
+      left: auto !important;
+      right: -14px !important;
+    }
+  }
+
+  // add posts buttons
+  .add_post_menu {
+    li.btn:nth-child(1),
+    li.btn:nth-child(2),
+    li.btn:nth-child(4),
+    li.btn:nth-child(5) {
+      top: 0px;
+      left: auto !important;
+      right: -110px !important;
+    }
+    li.btn:nth-child(3) {
+      left: auto !important;
+      right: -110px !important;
+    }
+
+    input#toggle_addpost:checked ~ #show-menu li.btn:nth-child(1) {
+      left: auto !important;
+      right: 25px !important;
+    }
+
+    input#toggle_addpost:checked ~ #show-menu li.btn:nth-child(2) {
+      left: auto !important;
+      right: 75px !important;
+    }
+
+    input#toggle_addpost:checked ~ #show-menu li.btn:nth-child(3) {
+      left: auto !important;
+      right: 100px !important;
+    }
+
+    input#toggle_addpost:checked ~ #show-menu li.btn:nth-child(4) {
+      left: auto !important;
+      right: 75px !important;
+    }
+
+    input#toggle_addpost:checked ~ #show-menu li.btn:nth-child(5) {
+      left: auto !important;
+      right: 25px !important;
+    }
+  }
+  .show .add_posts_forms .emojionearea-button {
+    left: 5px !important;
+    right: auto !important;
+  }
+  .show .add_posts_forms .emoji {
+    right: auto !important;
+    left: 5px !important;
+  }
+  .show .add_posts_forms .emojionearea-picker {
+    left: 10px !important;
+    right: auto !important;
+  }
+  input#toggle_bg_color {
+    right: 15px;
+  }
+  .show label#bg-color,
+  .show input#toggle_bg_color {
+    margin-top: -8px !important;
+  }
+  .show #addFile__post {
+    right: 15px !important;
+    left: auto !important;
+  }
+  .show .post__body span {
+    text-align: right;
+  }
+  @media only screen and (max-width: 768px) {
+    // sidebar
+    .globle_profile_sidebar {
+      right: auto !important;
+    }
+    // add post buttons
+    .add_post_menu
+      input#toggle_addpost:checked
+      ~ #show-menu
+      li.btn:nth-child(1) {
+      right: -150px !important;
+      left: auto !important;
+    }
+    .add_post_menu
+      input#toggle_addpost:checked
+      ~ #show-menu
+      li.btn:nth-child(2) {
+      right: -110px !important;
+      left: auto !important;
+    }
+    .add_post_menu
+      input#toggle_addpost:checked
+      ~ #show-menu
+      li.btn:nth-child(3) {
+      right: -50px !important;
+      left: auto !important;
+    }
+    .add_post_menu
+      input#toggle_addpost:checked
+      ~ #show-menu
+      li.btn:nth-child(4) {
+      right: 10px !important;
+      left: auto !important;
+    }
+    .add_post_menu
+      input#toggle_addpost:checked
+      ~ #show-menu
+      li.btn:nth-child(5) {
+      right: 45px !important;
+      left: auto !important;
+    }
+    #add_post_btn .toggleBtn {
+      margin-right: -50px;
+    }
+
+    /////////////////////////////////////////////
+    .emojionearea .emojionearea-picker {
+      right: auto !important;
+      left: -35px;
+    }
+    .emojionearea-button {
+      left: auto !important;
+      right: 3px !important;
+    }
+    .sidebar_panel #profile_nav a.active {
+      border-right: 0 !important;
+    }
+
+    aside.left-sidebar ul a.active {
+      border-left: 0 !important;
+      border-right: 0 !important;
+    }
+    .timeline .card-post ul.location {
+      right: 0 !important;
+      left: auto !important;
+    }
+    // chat responsive (r t l)
+    body.open {
+      .chat_nav ul.chat_user li.user_info span.online_dot {
+        left: auto !important;
+        right: 18px !important;
+      }
+      #backbtn {
+        right: 0 !important;
+        left: auto !important;
+      }
+      .sidebar_panel {
+        left: auto !important;
+        right: -100% !important;
+        transition: 0.3s ease-out;
+        -ms-transition: 0.3s ease-out;
+        -webkit-transition: 0.3s ease-out;
+        -moz-transition: 0.3s ease-out;
+        -o-transition: 0.3s ease-out;
+      }
+    }
+    /////////////////
+    .user_information {
+      width: 100% !important;
+      left: -100% !important;
+      right: auto !important;
+    }
+
+    // settings responsive
+    #settings .form-control .col-1 {
+      float: right !important;
+    }
+  }
+
+  .chat_box .send_msg,
+  .comments_form .send_comment,
+  header.home_header #backbtn i,
+  .group_name i {
+    transform: rotateY(180deg);
+  }
+}

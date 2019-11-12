@@ -1,0 +1,790 @@
+// responsive profile
+@media only screen and (max-width: 768px) {
+  .globle_profile_sidebar {
+    .overlay,
+    .card-img-top {
+      height: 130px !important;
+    }
+    .edit_profile {
+      top: 140px !important;
+    }
+  }
+  .sidebar_panel #profile_nav li:nth-child(1),
+  #groups #profile_nav li:nth-child(1),
+  .sidebar_panel #profile_nav li:nth-child(2),
+  #groups #profile_nav li:nth-child(2) {
+    top: 80px !important;
+  }
+  .sidebar_panel #profile_nav li:nth-child(1),
+  #groups #profile_nav li:nth-child(1) {
+    left: 30px;
+    right: auto;
+  }
+  .sidebar_panel #profile_nav li:nth-child(2),
+  #groups #profile_nav li:nth-child(2) {
+    right: 30px;
+    left: auto;
+  }
+  @if $styleLang==arabic {
+    .sidebar_panel #profile_nav li:nth-child(1),
+    #groups #profile_nav li:nth-child(1) {
+      right: 30px !important;
+      left: auto !important;
+    }
+    .sidebar_panel #profile_nav li:nth-child(2),
+    #groups #profile_nav li:nth-child(2) {
+      left: 30px !important;
+      right: auto !important;
+    }
+  }
+}
+
+/////////////////////////////////
+.card {
+  border: 0;
+  background: transparent;
+}
+// reset sidebar global style
+.globle_profile_sidebar {
+  right: auto !important;
+  left: auto !important;
+}
+header .profile_menu {
+  li {
+    width: 100%;
+
+    span {
+      cursor: pointer;
+      width: 16px;
+      height: 1px;
+      background: #fff;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%);
+
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        width: 22px;
+        height: 1px;
+        background: #fff;
+        left: 0;
+      }
+
+      &:before {
+        top: -8px;
+      }
+
+      &:after {
+        bottom: -8px;
+      }
+    }
+  }
+
+  button {
+    background: transparent;
+    border: 0;
+    outline: none;
+    width: 45px;
+    height: 45px;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+// profile_menu modal
+.modal {
+  .modal-dialog {
+    height: 100vh !important;
+    margin: 0 auto !important;
+  }
+
+  .modal-content {
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--bg-panel);
+
+    ul.nav {
+      padding: 10px;
+
+      li {
+        text-align: center;
+
+        a {
+          color: var(--color-text);
+          border-bottom: 1px solid var(--light-gray);
+        }
+      }
+    }
+  }
+}
+
+// sidebar panel
+.sidebar_panel,
+#groups {
+  background-color: var(--bg);
+  overflow: hidden;
+
+  .card-body {
+    padding: 10px;
+
+    h2 {
+      font-size: 1em;
+    }
+
+    h3 {
+      font-size: 0.9em;
+    }
+  }
+
+  .card-text {
+    font-size: 0.9em;
+    color: var(--color-text);
+    opacity: 0.6;
+  }
+
+  ul#follow-btns {
+    margin: 20px 0;
+
+    button {
+      position: relative;
+      border: 2px solid var(--secondary-color);
+      padding: 3px 10px;
+      border-radius: $radius-20;
+      font-size: $mdfont;
+    }
+
+    li {
+      display: inline-block;
+
+      button {
+        color: var(--secondary-color);
+        background: transparent;
+      }
+    }
+
+    li.follow_btn {
+      button {
+        background: var(--secondary-color);
+        color: var(--white-color-text);
+      }
+    }
+  }
+
+  #profile_nav {
+    margin-bottom: 25px;
+    border: 0;
+
+    li {
+      border-bottom: 1px solid var(--light-gray);
+      width: 100%;
+      //  a.active {
+      //    border-left: 2px solid $secondaryColor;
+      //  }
+
+      a {
+        color: var(--color-text);
+        position: relative;
+        font-size: 0.96em;
+        padding: 10px;
+        display: block;
+      }
+    }
+
+    a.active {
+      border-left: 2px solid;
+      color: var(--secondary-color);
+      font-weight: bolder;
+    }
+
+    li.follow_statistics {
+      background-color: var(--bg);
+      width: 65px;
+      height: 65px;
+      position: absolute;
+      top: 65px;
+      border-radius: $circle;
+
+      a.active {
+        background-color: var(--secondary-color);
+        color: var(--white-color-text) !important;
+        border: 0 !important;
+      }
+
+      a {
+        left: 3px;
+        top: 3px;
+        color: var(--secondary-color) !important;
+        width: 59px;
+        height: 59px;
+        line-height: 22px;
+        text-align: center;
+        border-radius: $circle;
+        border: 1px solid;
+        font-size: 0.8em;
+        position: absolute;
+        padding: 0 !important;
+
+        b {
+          font-size: $smfont;
+          margin-top: 5px;
+          margin-bottom: -5px;
+          display: block;
+        }
+
+        span {
+          font-size: $xsfont;
+        }
+      }
+    }
+
+    li:nth-child(1) {
+      left: 25px;
+      right: auto;
+    }
+
+    li:nth-child(2) {
+      right: 25px;
+      left: auto;
+    }
+  }
+}
+
+// users item
+.tab-content {
+  background-color: var(--bg-panel);
+  overflow-x: hidden;
+
+  .card-header,
+  .card-footer {
+    background-color: var(--bg);
+    border-bottom: 1px solid var(--light-gray);
+    width: 100%;
+    margin-bottom: 15px;
+    color: var(--color-text);
+    text-align: center;
+
+    span {
+      font-size: $mdfont;
+      width: 61%;
+      opacity: 0.5;
+      text-align: $right;
+    }
+  }
+  .card-footer {
+    border-bottom: 0;
+    border-top: 1px solid var(--light-gray);
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 0;
+
+    button {
+      background: var(--primary-color);
+      color: var(--white-color-text);
+      border: 0;
+      border-radius: $radius-20;
+      font-size: 0.8em;
+      padding: 7px 15px;
+      float: $right;
+    }
+  }
+  div#edit_profile .card-footer {
+    position: relative;
+  }
+}
+
+// followers section
+#followers,
+#following,
+#admins,
+#members {
+  padding: 0 15px;
+
+  .user_item {
+    padding: 15px 10px;
+    border-radius: $radius-10;
+    background: var(--bg);
+    border: 1px solid var(--light-gray);
+  }
+
+  ul {
+    padding: 0 10px;
+  }
+
+  li {
+    padding: 5px;
+    position: relative;
+    float: $left;
+
+    i.options {
+      position: absolute;
+      top: 5px;
+      right: 3px;
+      width: 25px;
+      height: 25px;
+      line-height: 25px;
+      border-radius: 50%;
+      font-size: 0.9em;
+      color: var(--gray);
+      @include transition;
+    }
+
+    i.options:hover {
+      background: var(--light-gray);
+    }
+  }
+
+  img {
+    width: 50px;
+    height: 50px;
+    border-radius: $radius-20;
+    margin: 0 auto;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.071);
+    padding: 4px;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: $smfont;
+    color: var(--color-text);
+  }
+
+  h3 {
+    font-size: $xsfont;
+    color: var(--gray);
+  }
+
+  p {
+    font-size: 0.8em;
+    color: var(--color-text);
+
+    span {
+      color: var(--primary-color);
+      font-size: 1em;
+    }
+  }
+
+  form {
+    border: 0;
+    padding: 0;
+    background: transparent;
+  }
+
+  button {
+    background: transparent;
+    font-size: $xsfont;
+    padding: 3px 10px;
+    border-radius: $radius-20;
+    border: 1px solid;
+    color: var(--secondary-color);
+  }
+
+  span {
+    color: var(--dark-gray);
+    font-size: 0.78em;
+  }
+}
+
+// following list & Blocked List - last posts & saved posts
+#following,
+#followers,
+#posts {
+  .card-header {
+    text-align: center;
+
+    ul {
+      border: 1px solid var(--secondary-color);
+      display: inline-flex;
+      border-radius: 20px;
+      padding: 0;
+      overflow: hidden;
+      opacity: 0.6;
+      @include transition;
+
+      li {
+        padding: 0;
+
+        a {
+          color: var(--secondary-color);
+          padding: 5px 10px;
+
+          &.active {
+            background: var(--secondary-color);
+            color: var(--white-color-text);
+          }
+        }
+      }
+    }
+  }
+
+  #blockedlist {
+    li a {
+      border: 1px solid red;
+    }
+
+    button,
+    p span {
+      color: red;
+    }
+  }
+
+  #closefriends {
+    li a {
+      border: 1px solid green;
+    }
+
+    button,
+    p span {
+      color: green;
+    }
+  }
+}
+
+// posts section
+#posts,
+#followers,
+#following {
+  .tab-content {
+    height: auto !important;
+  }
+}
+.posts_container {
+  columns: 3;
+  width: 100%;
+  column-gap: 10px;
+  .post_box {
+    width: 100%;
+    break-inside: avoid;
+    margin: 0 0 15px 0;
+    background: var(--bg);
+    border-radius: $radius-10;
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+
+    .post_img {
+      border-radius: $radius-10;
+      overflow: hidden;
+      img {
+        max-width: 100%;
+      }
+    }
+    div#like_btn,
+    div#saved_btn {
+      position: relative;
+      button {
+        background: transparent;
+        color: var(--white-color-text);
+        border: 0;
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        font-size: $lgfont;
+      }
+    }
+    div#saved_btn {
+      button {
+        left: 40px;
+      }
+    }
+  }
+}
+
+#mygroups {
+  .col-md-4 {
+    float: $left;
+    padding: 2px;
+    margin-bottom: 8px;
+  }
+
+  .card {
+    border-radius: $radius-10;
+    overflow: hidden;
+    border: 1px solid var(--light-gray);
+  }
+
+  .card:hover .card-post {
+    opacity: 1;
+  }
+}
+
+// Edit profile Section
+#edit_profile_form .input-wrap span#showpwd,
+#signup_page .input-wrap span#showpwd,
+#greate_new .input-wrap span#showpwd {
+  top: 22px !important;
+}
+#edit_profile,
+#greate_new {
+  .form-control {
+    padding: 15px 0;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 15px;
+    position: relative;
+    background: var(--bg);
+    border-color: var(--light-gray);
+    text-align: $left;
+  }
+
+  .card {
+    margin-left: -15px;
+    margin-right: -15px;
+    min-height: 110px;
+
+    input {
+      position: absolute;
+      max-width: 35px;
+      opacity: 0;
+      z-index: 1;
+      cursor: pointer;
+    }
+
+    .edit_profile {
+      left: 75px;
+      bottom: 0;
+    }
+
+    .edit_cover {
+      right: 10px;
+      top: 10px;
+    }
+
+    i {
+      position: absolute;
+      background: var(--secondary-color);
+      border-radius: $circle;
+      padding: 5px;
+      font-size: $lgfont;
+      color: #fff;
+      z-index: 0;
+    }
+  }
+
+  img.profile_img {
+    position: absolute;
+    width: 60px;
+    border-radius: $circle;
+    left: 3%;
+    border: 4px solid var(--bg);
+    top: 50%;
+  }
+
+  img.card-img-top {
+    position: absolute;
+    border: 7px solid var(--bg);
+  }
+}
+
+// settings section
+#settings,
+#trash {
+  .card {
+    position: relative;
+  }
+
+  .form-control {
+    height: auto;
+    padding: 10px 0;
+    border-radius: $radius-20;
+    overflow: hidden;
+    border-color: var(--light-gray);
+    background-color: var(--bg);
+    margin-bottom: 10px;
+    text-align: $left;
+
+    h4 {
+      font-size: $lgfont;
+      color: var(--color-text);
+    }
+
+    p {
+      margin: 0;
+      font-size: $xsfont;
+      color: var(--gray);
+    }
+  }
+
+  input[type='checkbox'] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+  }
+
+  label.switch {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 40px;
+    height: 20px;
+    background: var(--dark-gray);
+    display: block;
+    border-radius: 100px;
+    position: relative;
+  }
+
+  label.switch:after {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 23px;
+    height: 23px;
+    background: var(--bg);
+    border: 3px solid var(--dark-gray);
+    border-radius: 90px;
+    @include transition;
+  }
+
+  input:checked + label {
+    background: var(--primary-color);
+  }
+
+  input:checked + label:after {
+    left: calc(100% - 1px);
+    transform: translateX(-100%);
+    border-color: var(--primary-color);
+  }
+
+  label:active:after {
+    width: 40px;
+  }
+}
+
+// Trash Section
+.trash_content {
+  h3,
+  p {
+    text-align: $left;
+  }
+
+  h3 {
+    font-size: $mdfont;
+    font-weight: bold;
+    margin: 5px 0 1px;
+    color: var(--color-text);
+  }
+
+  img {
+    float: $left;
+    width: 100%;
+    border: 1px solid var(--light-gray);
+    border-radius: $radius-10;
+  }
+
+  p {
+    font-size: $xsfont;
+  }
+}
+
+.restore_btn button {
+  width: 100%;
+  background: transparent;
+  border-color: var(--secondary-color);
+  border-radius: 20px;
+  margin: 10px 0;
+  color: var(--secondary-color);
+  position: relative;
+  padding-left: 20px;
+
+  i {
+    font-size: $lgfont;
+    position: absolute;
+    left: 5px;
+    top: 3px;
+  }
+}
+
+// emoji style
+#scrMsg .emojionearea .emojionearea-editor {
+  min-height: 100px !important;
+  text-align: $left !important;
+}
+
+#scrMsg .emojionearea .emojionearea-picker {
+  left: 0;
+  right: auto;
+  top: 35px !important;
+}
+
+// responsive
+@media only screen and (max-width: 768px) {
+  //header
+  header.home_header {
+    background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      color-stop(50%, rgba(3, 2, 4, 0.45)),
+      to(transparent)
+    );
+
+    .profile_logo,
+    .right_options .s_msg_btn button {
+      background: transparent;
+    }
+  }
+
+  aside.right-sidebar {
+    display: none;
+  }
+
+  .page_panel {
+    margin: 0;
+    height: auto;
+    border-radius: 0;
+  }
+
+  .sidebar_panel {
+    height: auto;
+
+    li.profile_users {
+      width: 50% !important;
+    }
+
+    #profile_nav {
+      margin: 0;
+
+      li {
+        width: 25%;
+      }
+
+      a {
+        padding: 10px 5px !important;
+      }
+
+      a.active {
+        border: 0;
+        border-bottom: 2px solid var(--secondary-color);
+      }
+    }
+  }
+
+  .tab-content {
+    height: auto;
+  }
+
+  #posts .card {
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-bottom: 15px;
+  }
+
+  // settings page
+  #settings label.switch {
+    margin-left: -40px;
+  }
+
+  // header & footer
+  .tab-content .card-header span,
+  .tab-content .card-footer span {
+    width: 100% !important;
+    text-align: $left !important;
+  }
+}
+
+// reset style for post button
+#add_post_btn {
+  line-height: 7px !important;
+}

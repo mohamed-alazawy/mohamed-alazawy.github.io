@@ -1,0 +1,156 @@
+.sreach-form {
+  margin: 15px 0;
+
+  .form-control {
+    background: var(--bg-panel);
+    border-radius: $radius-20;
+    padding: 20px;
+    border-color: var(--light-gray);
+    color: var(--simple-gray);
+  }
+
+  ul {
+    margin: 15px -10px;
+    display: flex;
+
+    li {
+      margin: 0 10px;
+    }
+
+    a {
+      color: var(--simple-gray);
+      position: relative;
+      padding: 7px 15px;
+      padding-left: 20px;
+      background: var(--bg-panel);
+      border: 1px solid var(--light-gray);
+      border-radius: $radius-20;
+      font-size: $mdfont;
+    }
+  }
+
+  //chakebox
+  input[type='checkbox'] {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+
+    + .label {
+      position: relative;
+      padding-left: 5px;
+      color: var(--simple-gray);
+      font-size: $lgfont;
+      cursor: pointer;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: -6px;
+        left: -15px;
+        width: 1em;
+        height: 1em;
+        border: 2px solid var(--simple-gray);
+        border-radius: $radius-20;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: -5px;
+        left: -15px;
+        width: 0.92em;
+        height: 0.92em;
+        transform: scale(0);
+        background-color: var(--secondary-color);
+        border-radius: $radius-20;
+        transition: all 0.2s linear;
+        opacity: 0;
+      }
+
+      svg {
+        position: absolute;
+        top: -5px;
+        left: -20px;
+        z-index: 1;
+      }
+
+      #check-icon {
+        stroke: #fff;
+        stroke-dasharray: 36;
+        stroke-dashoffset: 36;
+      }
+    }
+
+    &:checked {
+      + .label {
+        &::after {
+          transform: scale(1);
+          opacity: 1;
+        }
+
+        #check-icon {
+          animation-name: check-animation;
+          animation-duration: 0.2s;
+          animation-delay: 0.4s;
+          animation-fill-mode: forwards;
+          animation-timing-function: cubic-bezier(1, 0.12, 0.96, 0.62);
+        }
+      }
+    }
+  }
+
+  @keyframes check-animation {
+    0% {
+      stroke-dashoffset: 36;
+    }
+
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+}
+
+//search content
+.search-content {
+  height: 27vh;
+  overflow-x: hidden;
+  overflow-y: overlay;
+}
+
+// custom search
+.custom_search {
+  .col-md-6 {
+    text-align: $left;
+  }
+
+  select {
+    margin-bottom: 25px;
+  }
+
+  label {
+    color: var(--color-text);
+    margin-bottom: 10px;
+  }
+
+  .btn {
+    border-radius: $radius-20;
+    background: var(--bg-panel);
+    color: var(--color-text);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .page_panel {
+    height: auto;
+    padding-bottom: 15px;
+    border-radius: $radius-20 $radius-20 0 0;
+  }
+}
+
+// reset style for post button
+#add_post_btn {
+  line-height: 7px !important;
+}

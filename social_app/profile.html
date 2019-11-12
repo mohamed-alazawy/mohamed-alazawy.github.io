@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+     <title>Social App - Profile</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="css/css_plugins/bootstrap.min.css">
+
+     <!-- custom css -->
+     <link rel="stylesheet" href="css/profile.css">
+
+     <!-- emojes plugin -->
+     <link rel="stylesheet" href="css/css_plugins/emoji.min.css">
+     <!-- icon fonts -->
+     <link rel="stylesheet" href="css/css_plugins/material-icons.css">
+     <link rel="stylesheet" href="css/css_plugins/themify-icons.css">
+     <link rel="stylesheet" href="css/css_plugins/all.css">
+     <link rel="stylesheet" href="css/css_plugins/fontawesome.min.css">
+</head>
+
+<body>
+     <!-- Start header -->
+     <header class="home_header">
+          <div class="profile_logo col-1">
+               <!-- profile menu -->
+               <ul class="profile_menu">
+                    <li>
+                         <button type="button" data-toggle="modal" data-target="#exampleModal">
+                              <span></span>
+                         </button>
+                    </li>
+
+               </ul>
+          </div>
+          <div class="right_options">
+               <div class="notif-btn">
+                    <button data-toggle="modal" data-target="#notif"><i class="material-icons">notifications_none</i></button>
+               </div>
+               <a href="inbox.html" class="s_msg_btn">
+                    <button><i class="material-icons">inbox</i></button>
+               </a>
+          </div>
+     </header>
+     <!-- profile Menu Modal -->
+     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+               <div class="modal-content">
+
+                    <ul class="nav flex-column">
+                         <li class="nav-item">
+                              <a class="nav-link" href="#">Copy Profile url</a>
+                         </li>
+                         <li class="nav-item">
+                              <a class="nav-link" href="#">Block</a>
+                         </li>
+                         <li class="nav-item">
+                              <a class="nav-link" href="#">Mute</a>
+                         </li>
+                    </ul>
+
+               </div>
+          </div>
+     </div>
+
+     <!-- left sidebar  -->
+     <aside class="left-sidebar">
+          <form>
+               <a href="home.html"><i class="ti-home"></i></a>
+               <a href="search.html"><i class="ti-search"></i></a>
+               <div id="add_post_btn">
+                    <div class="add_post_menu">
+                         <input type="checkbox" id="toggle_addpost" />
+                         <label id="show-menu" for="toggle_addpost">
+                              <div class="btn toggleBtn">
+                                   <i class="material-icons md-36 menuBtn ti-plus"></i>
+                                   <i class="material-icons md-36 closeBtn ti-close"></i>
+                              </div>
+                              <ul class="nav nav-tabs posts_tabs" role="tablist">
+                                   <li class="btn">
+                                        <a class="active" href="#text__post" aria-selected="true" role="tab"
+                                             data-toggle="tab">
+                                             <i class="material-icons ti-text md-36"></i>
+                                        </a>
+                                   </li>
+
+                                   <li class="btn">
+                                        <a href="#images__post" aria-selected="false" role="tab" data-toggle="tab">
+                                             <i class="material-icons ti-image md-36"></i>
+                                        </a>
+                                   </li>
+
+
+                                   <li class="btn">
+                                        <a href="#videos__post" aria-selected="false" role="tab" data-toggle="tab">
+                                             <i class="material-icons ti-video-camera md-36"></i>
+                                        </a>
+                                   </li>
+
+                                   <li class="btn">
+                                        <a href="#gallery__post" aria-selected="false" role="tab" data-toggle="tab">
+                                             <i class="material-icons md-36 ti-gallery"></i>
+                                        </a>
+                                   </li>
+
+                                   <li class="btn">
+                                        <a href="#poll__post" aria-selected="false" role="tab" data-toggle="tab">
+                                             <i class="material-icons ti-bar-chart md-36"></i>
+                                        </a>
+                                   </li>
+
+                              </ul>
+                         </label>
+                    </div>
+               </div>
+               <a href="chat.html"><i class="material-icons">chat_bubble_outline</i></a>
+               <a href="groups.html"><i class="material-icons">group</i></a>
+          </form>
+     </aside>
+     <!-- add posts forms -->
+     <div class="add_posts_forms">
+          <div class="col-md-8 m-auto">
+               <form>
+                    <div class="tab-content" id="tab-content">
+                         <!-- start (text post) tab -->
+                         <div class="tab-pane fade show active in" id="text__post" aria-labelledby="text__post"
+                              role="tabpanel">
+                              <nav>
+                                   <h3>Text Post</h3>
+                                   <select id="post_status">
+                                        <option>Public</option>
+                                        <option>Followers</option>
+                                        <option>Closed Friends</option>
+                                   </select>
+                              </nav>
+                              <div class="post__body">
+                                   <input class="form-control post_title" type="text"
+                                        placeholder="Title, if you want one">
+                                   <div class="post__content">
+                                        <textarea class="post_textarea" type="text"
+                                             placeholder="Type your post here"></textarea>
+                                        <div class="emoji">Add Emoji</div>
+                                   </div>
+                                   <input type="checkbox" id="toggle_bg_color" />
+                                   <button id="toggle-colorsBtn">Background Color</button>
+                                   <label id="bg-color" for="toggle_bg_color">
+                                        <div class="colorpicker">
+                                             <div id="red"></div>
+                                        </div>
+                                        <div class="colorpicker">
+                                             <div id="orange"></div>
+                                        </div>
+                                        <div class="colorpicker">
+                                             <div id="blue"></div>
+                                        </div>
+                                        <div class="colorpicker">
+                                             <div id="green"></div>
+                                        </div>
+                                        <div class="colorpicker">
+                                             <div id="darkGraybg"></div>
+                                        </div>
+                                        <div class="colorpicker">
+                                             <div id="graybg"></div>
+                                        </div>
+                                        <div class="colorpicker">
+                                             <div id="purple"></div>
+                                        </div>
+                                   </label>
+                              </div>
+                         </div>
+                         <!-- end (text post) tab -->
+                         <!-- start (images post) tab -->
+                         <div class="tab-pane fade" id="images__post" aria-labelledby="images__post" role="tabpanel">
+                              <nav>
+                                   <h3>Image Post</h3>
+                                   <select id="post_status">
+                                        <option>Public</option>
+                                        <option>Followers</option>
+                                        <option>Closed Friends</option>
+                                   </select>
+                              </nav>
+                              <div class="post__body">
+                                   <input class="form-control post_title" type="text"
+                                        placeholder="Title, if you want one">
+                                   <div class="post__content">
+                                        <textarea class="post_textarea" type="text"
+                                             placeholder="Type your post here"></textarea>
+                                        <div class="emoji">Add Emoji</div>
+                                   </div>
+                                   <input type="file" name="image__post" id="image__post">
+                                   <button id="addFile__post">
+                                        <i class="ti-image"></i> Add Image
+                                   </button>
+                              </div>
+                         </div>
+                         <!-- end (images post) tab -->
+                         <!-- start (videos post) tab -->
+                         <div class="tab-pane fade" id="videos__post" aria-labelledby="videos__post" role="tabpanel">
+                              <nav>
+                                   <h3>Video Post</h3>
+                                   <select id="post_status">
+                                        <option>Public</option>
+                                        <option>Followers</option>
+                                        <option>Closed Friends</option>
+                                   </select>
+                              </nav>
+                              <div class="post__body">
+                                   <input class="form-control post_title" type="text"
+                                        placeholder="Title, if you want one">
+                                   <div class="post__content">
+                                        <textarea class="post_textarea" type="text"
+                                             placeholder="Type your post here"></textarea>
+                                        <div class="emoji">Add Emoji</div>
+                                   </div>
+                                   <input type="file" name="image__post" id="image__post">
+                                   <button id="addFile__post">
+                                        <i class="far fa-play-circle"></i> Add Video
+                                   </button>
+                                   <span>Video should not exceed 1 minute</span>
+                              </div>
+                         </div>
+                         <!-- end (videos post) tab -->
+                         <!-- start (gallery post) tab -->
+                         <div class="tab-pane fade" id="gallery__post" aria-labelledby="gallery__post" role="tabpanel">
+                              <nav>
+                                   <h3>Images / Videos Post</h3>
+                                   <select id="post_status">
+                                        <option>Public</option>
+                                        <option>Followers</option>
+                                        <option>Closed Friends</option>
+                                   </select>
+                              </nav>
+                              <div class="post__body">
+                                   <input class="form-control post_title" type="text"
+                                        placeholder="Title, if you want one">
+                                   <div class="post__content">
+                                        <textarea class="post_textarea" type="text"
+                                             placeholder="Type your post here"></textarea>
+                                        <div class="emoji">Add Emoji</div>
+                                   </div>
+                                   <input type="file" name="image__post" id="image__post">
+                                   <button id="addFile__post">
+                                        <i class="ti-layers-alt"></i> Add Images / Videos
+                                   </button>
+                                   <span>The number of items must not exceed 10</span>
+                              </div>
+                         </div>
+                         <!-- end (gallery post) tab -->
+                         <!-- start (poll post) tab -->
+                         <div class="tab-pane fade" id="poll__post" aria-labelledby="poll__post" role="tabpanel">
+                              <nav>
+                                   <h3>Poll Post</h3>
+                                   <select id="post_status">
+                                        <option>Public</option>
+                                        <option>Followers</option>
+                                        <option>Closed Friends</option>
+                                   </select>
+                              </nav>
+                              <div class="post__body">
+                                   <input class="form-control" type="text" id="poll_guestion"
+                                        placeholder="Type Your Question">
+
+                                   <input class="form-control" type="text" id="poll_options"
+                                        placeholder="Type Option 1 ">
+                                   <input class="form-control" type="text" id="poll_options"
+                                        placeholder="Type Option 2 ">
+                                   <input type="button" id="addpollOption" value="Remove Option">
+                                   <input type="button" id="addpollOption" value="Add Option">
+
+                                   <input type="file" name="image__post" id="image__post">
+                                   <button id="addFile__post">
+                                        <i class="ti-image"></i> Add Image
+                                   </button>
+                              </div>
+                         </div>
+                         <!-- end (poll post) tab -->
+
+                    </div>
+
+                    <!-- publish button -->
+                    <button id="publish_btn" type="submit"><i class="ti-plus"></i> publish</button>
+               </form>
+          </div>
+     </div>
+     <!--end add posts forms-->
+     <!-- right sidebar -->
+     <aside class="right-sidebar">
+          <ul>
+               <li><a href="#"><span class="online"></span><img src="img/avatar1.jpg"></a></li>
+               <li><a href="#"><img src="img/avatar2.jpg"></a></li>
+
+               <li><a href="#"><img src="img/avatar3.jpg"></a></li>
+               <li><a href="#"><span class="online"></span><img src="img/avatar4.jpg"></a></li>
+               <li><a href="#"><img src="img/avatar1.jpg"></a></li>
+               <li><a href="#"><span class="online"></span><img src="img/avatar2.jpg"></a></li>
+               <li><a href="#"><img src="img/avatar3.jpg"></a></li>
+               <li><a href="#"><span class="online"></span><img src="img/avatar4.jpg"></a></li>
+               <li><a href="#"><img src="img/avatar1.jpg"></a></li>
+               <li><a href="#"><img src="img/avatar2.jpg"></a></li>
+               <li><a href="#"><img src="img/avatar3.jpg"></a></li>
+               <li><a href="#"><img src="img/avatar4.jpg"></a></li>
+               <li><a href="#"><img src="img/avatar1.jpg"></a></li>
+               <li><a href="#"><img src="img/avatar2.jpg"></a></li>
+          </ul>
+          <form class="add_story">
+               <input type="file" name="add_story" />
+               <i class="material-icons">add_circle</i>
+               <img src="img/profile.png">
+          </form>
+               
+          
+     </aside>
+     <div class="clearfix"></div>
+           <!-- Notifigation Content Modal -->
+           <div class="modal fade" id="notif" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+               <div class="modal-dialog" role="document">
+               <div class="modal-content">
+               <div class="modal-header">
+                    <div class="header-title"><i class="material-icons">notifications</i><h2>Notifigations</h2><span class="badge badge-light">4</span></div>
+                    
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+               </div>
+               <div class="modal-body">
+                    <form>
+                    <div class="card">
+                         <div class="notif_icon col-1">
+                                   <i class="material-icons">favorite</i>
+                         </div>
+                         <img class="avatar col-2" src="img/post-img.jpg">
+                         <p class="col-7"><span>Ahmed Kitab </span> Liked Your Post <time>12:54 AM</time></p>
+                         <img class="col-2" src="img/ms-files.png">
+                    </div>
+                    
+                    <div class="card">
+                         <div class="notif_icon col-1">
+                              <i class="fas fa-hashtag"></i>
+                         </div>
+                         <img class="avatar col-2" src="img/avatar2.jpg">
+                         <p class="col-7"><span>Mays Ahmed </span> Tagged You in a Post <time>12:54 AM</time></p>
+                         <img class="col-2" src="img/ms-files.png">
+                    </div>
+
+                    <div class="card">
+                         <div class="notif_icon col-1">
+                              <i class="material-icons"> comment </i>
+                         </div>
+                         <img class="avatar col-2" src="img/avatar4.jpg">
+                         <p class="col-7"><span>Mohamed Kitab </span> Add a Comment to Your Post <time>12:54 AM</time></p>
+                         <img class="col-2" src="img/ms-files.png">
+                    </div>
+
+                    <div class="card">
+                         <div class="notif_icon col-1">
+                              <i class="fas fa-user-times"></i>
+                         </div>
+                         <img class="avatar col-2" src="img/avatar3.jpg">
+                         <p class="col-7"><span>Mohamed Kitab </span> Unflollw You <time>12:54 AM</time></p>
+                         <img class="col-2" src="img/ms-files.png">
+                    </div>
+
+                    <div class="card">
+                         <div class="notif_icon col-1">
+                              <i class="fas fa-user-plus"></i>
+                         </div>
+                         <img class="avatar col-2" src="img/avatar4.jpg">
+                         <p class="col-7"><span>Mohamed Kitab </span> started flollwing You <time>12:54 AM</time></p>
+                         <img class="col-2" src="img/ms-files.png">
+                    </div>
+               </div>
+              <div class="card-footer">
+                   <button type="button">
+                        Show All
+                   </button>
+              </div>
+          </form>
+               </div>
+               </div>
+          </div>
+          <!-- end notifigations content -->
+     <!-- end sidebar  -->
+     <div class="container">
+          <div class="row">
+               <div class="page_panel col-12">
+                    <div class="row">
+                         <div class="sidebar_panel col-md-3 globle_profile_sidebar">
+                              <div class="row">
+                                   <div class="card">
+
+                                        <img src="img/cover.png" class="card-img-top" alt="...">
+                                        <div class="overlay"></div>
+
+                                        <img src="img/profile.png" class="profile_img" alt="...">
+
+                                        <div class="card-body">
+                                             <h2>mohamed kitab</h2>
+                                             <h3>@youser name</h3>
+                                             <!-- fowllow & messages buttons -->
+                                             <ul id="follow-btns">
+                                                  <li><button><i class="far fa-comment-dots"></i></button></li>
+                                                  <li class="follow_btn"><button>follow <i
+                                                                 class="fas fa-user-plus"></i></button></li>
+                                                  <li><button type="button" class="scr_msg_btn" data-toggle="modal" data-target="#scrMsg"><i class="fas fa-mask"></i></button></li>
+                                             </ul>
+                                             <!-- Secret Message Modal -->
+                                             <div class="modal fade" id="scrMsg" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                  <div class="modal-dialog" role="document">
+                                                  <div class="modal-content">
+                                                  <div class="modal-header">
+                                                       <img src="img/profile.png" alt="...">
+                                                       <h3>ahmed kitab</h3>
+                                                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                       <span aria-hidden="true">&times;</span>
+                                                       </button>
+                                                  </div>
+                                                  <div class="modal-body">
+                                                       <form>
+                                                       <textarea class="scr_msg_content" id="scr_msg_content" type="text" rows="4" placeholder="be honest in your message ..."></textarea>
+                                                  </div>
+                                                  <div class="modal-footer">
+                                                       <div style="margin: 0 auto;">
+                                                       <button type="button" class="close_btn" data-dismiss="modal">Cancel</button>
+                                                       <button type="submit" class="send_btn">Send</button>
+                                                       </div>
+                                                       </form>
+                                                  </div>
+                                                  </div>
+                                                  </div>
+                                             </div>
+                                             <!-- bio -->
+                                             <p class="card-text"> build on the card title and make up the bulk of the
+                                                  card's content.</p>
+                                             <!-- end bio -->
+
+                                        </div><!-- end card body-->
+
+                                        <!-- following buttons -->
+                                        <ul id="profile_nav" class="nav nav-tabs" role="tablist">
+                                             <!-- following buttons -->
+                                             <li class="follow_statistics"><a href="#followers" aria-selected="false"
+                                                       role="tab" data-toggle="tab"><b>13K</b>
+                                                       <span>Followers</span></a></li>
+                                             <li class="follow_statistics"><a href="#following" aria-selected="false"
+                                                       role="tab" data-toggle="tab"><b>750</b>
+                                                       <span>Following</span></a></li>
+
+                                             <!-- profile navigation -->
+                                             <li class="profile_users"><a class="active" href="#posts"
+                                                       aria-selected="true" role="tab" data-toggle="tab">Posts</a></li>
+                                             <li class="profile_users"><a href="#edit_profile" aria-selected="false"
+                                                       role="tab" data-toggle="tab">About</a></li>
+                                        </ul>
+                                   </div>
+                              </div>
+
+
+                         </div>
+
+
+                         <!-- panel content  -->
+                         <div class="tab-content col-md-9">
+
+                              <!-- Followers Content -->
+                              <div class="tab-pane row fade" id="followers" aria-labelledby="#followers"
+                                   role="tabpanel">
+                                   <div class="row">
+
+                                        <div class="card-header">
+                                             Followers
+                                        </div>
+
+                                   </div>
+                                   <ul class="row">
+                                        <li class="col-md-3">
+                                             <a href="#" class="user_item card text-center">
+                                                  <i class="options fas fa-ellipsis-v"></i>
+                                                  <img src="img/avatar2.jpg" class="card-img-top" alt="...">
+
+                                                  <h2>mohamed kitab</h2>
+                                                  <h3>@youser name</h3>
+
+                                                  <p class="card-text">
+                                                       <span><i class="fas fa-graduation-cap"></i></span> collage of
+                                                       fine arts
+                                                  </p>
+                                                  <form class="form-control">
+                                                       <button><i class="fas fa-mask"></i></button>
+                                                       <button>unfollow <i class="fas fa-user-minus"></i></button>
+                                                       <button><i class="far fa-comment-dots"></i></button>
+                                                  </form>
+
+                                                  <span>is following you</span>
+                                             </a>
+                                        </li>
+                                        <li class="col-md-3">
+                                             <a href="#" class="user_item card text-center">
+                                                  <i class="options fas fa-ellipsis-v"></i>
+                                                  <img src="img/avatar4.jpg" class="have_story card-img-top" alt="...">
+
+                                                  <h2>mohamed kitab</h2>
+                                                  <h3>@youser name</h3>
+                                                  <p class="card-text">
+                                                       <span><i class="fas fa-graduation-cap"></i></span> cairo
+                                                       university
+                                                  </p>
+                                                  <form class="form-control">
+                                                       <button><i class="fas fa-mask"></i></button>
+                                                       <button>unfollow <i class="fas fa-user-minus"></i></button>
+                                                       <button><i class="far fa-comment-dots"></i></button>
+                                                  </form>
+
+                                                  <span>is following you</span>
+                                             </a>
+                                        </li>
+                                        <li class="col-md-3">
+                                             <a href="#" class="user_item card text-center">
+                                                  <i class="options fas fa-ellipsis-v"></i>
+                                                  <img src="img/profile.png" class="card-img-top" alt="...">
+
+                                                  <h2>mohamed kitab</h2>
+                                                  <h3>@youser name</h3>
+                                                  <p class="card-text">
+                                                       <span><i class="fas fa-graduation-cap"></i></span> baghdad
+                                                       university
+                                                  </p>
+
+                                                  <form class="form-control">
+                                                       <button><i class="fas fa-mask"></i></button>
+                                                       <button>unfollow <i class="fas fa-user-minus"></i></button>
+                                                       <button><i class="far fa-comment-dots"></i></button>
+                                                  </form>
+
+                                                  <span>is following you</span>
+                                             </a>
+                                        </li>
+                                        <li class="col-md-3">
+                                             <a href="#" class="user_item card text-center">
+                                                  <i class="options fas fa-ellipsis-v"></i>
+                                                  <img src="img/avatar1.jpg" class="card-img-top" alt="...">
+
+                                                  <h2>mohamed kitab</h2>
+                                                  <h3>@youser name</h3>
+                                                  <p class="card-text">
+                                                       <span><i class="fas fa-graduation-cap"></i></span> collage of
+                                                       fine arts
+                                                  </p>
+                                                  <form class="form-control">
+                                                       <button><i class="fas fa-mask"></i></button>
+                                                       <button>unfollow <i class="fas fa-user-minus"></i></button>
+                                                       <button><i class="far fa-comment-dots"></i></button>
+                                                  </form>
+
+
+                                                  <span>is following you</span>
+                                             </a>
+                                        </li>
+                                        <li class="col-md-3">
+                                             <a href="#" class="user_item card text-center">
+                                                  <i class="options fas fa-ellipsis-v"></i>
+                                                  <img src="img/avatar1.jpg" class="card-img-top" alt="...">
+
+                                                  <h2>mohamed kitab</h2>
+                                                  <h3>@youser name</h3>
+                                                  <p class="card-text">
+                                                       <span><i class="fas fa-graduation-cap"></i></span> collage of
+                                                       fine arts
+                                                  </p>
+                                                  <form class="form-control">
+                                                       <button><i class="fas fa-mask"></i></button>
+                                                       <button>unfollow <i class="fas fa-user-minus"></i></button>
+                                                       <button><i class="far fa-comment-dots"></i></button>
+                                                  </form>
+
+
+                                                  <span>is following you</span>
+                                             </a>
+                                        </li>
+                                        <li class="col-md-3">
+                                             <a href="#" class="user_item card text-center">
+                                                  <i class="options fas fa-ellipsis-v"></i>
+                                                  <img src="img/avatar1.jpg" class="card-img-top" alt="...">
+
+                                                  <h2>mohamed kitab</h2>
+                                                  <h3>@youser name</h3>
+                                                  <p class="card-text">
+                                                       <span><i class="fas fa-graduation-cap"></i></span> collage of
+                                                       fine arts
+                                                  </p>
+                                                  <form class="form-control">
+                                                       <button><i class="fas fa-mask"></i></button>
+                                                       <button>unfollow <i class="fas fa-user-minus"></i></button>
+                                                       <button><i class="far fa-comment-dots"></i></button>
+                                                  </form>
+
+
+                                                  <span>is following you</span>
+                                             </a>
+                                        </li>
+                                        <li class="col-md-3">
+                                             <a href="#" class="user_item card text-center">
+                                                  <i class="options fas fa-ellipsis-v"></i>
+                                                  <img src="img/avatar1.jpg" class="card-img-top" alt="...">
+
+                                                  <h2>mohamed kitab</h2>
+                                                  <h3>@youser name</h3>
+                                                  <p class="card-text">
+                                                       <span><i class="fas fa-graduation-cap"></i></span> collage of
+                                                       fine arts
+                                                  </p>
+                                                  <form class="form-control">
+                                                       <button><i class="fas fa-mask"></i></button>
+                                                       <button>unfollow <i class="fas fa-user-minus"></i></button>
+                                                       <button><i class="far fa-comment-dots"></i></button>
+                                                  </form>
+
+
+                                                  <span>is following you</span>
+                                             </a>
+                                        </li>
+                                        <li class="col-md-3">
+                                             <a href="#" class="user_item card text-center">
+                                                  <i class="options fas fa-ellipsis-v"></i>
+                                                  <img src="img/avatar1.jpg" class="card-img-top" alt="...">
+
+                                                  <h2>mohamed kitab</h2>
+                                                  <h3>@youser name</h3>
+                                                  <p class="card-text">
+                                                       <span><i class="fas fa-graduation-cap"></i></span> collage of
+                                                       fine arts
+                                                  </p>
+                                                  <form class="form-control">
+                                                       <button><i class="fas fa-mask"></i></button>
+                                                       <button>unfollow <i class="fas fa-user-minus"></i></button>
+                                                       <button><i class="far fa-comment-dots"></i></button>
+                                                  </form>
+
+
+                                                  <span>is following you</span>
+                                             </a>
+                                        </li>
+                                   </ul>
+
+
+                              </div>
+
+                              <!--/ followers Content -->
+
+                              <!-- Following Content -->
+                              <div class="tab-pane row fade" id="following" aria-labelledby="#following"
+                                   role="tabpanel">
+                                   <div class="row">
+
+                                        <div class="card-header">
+                                             Following
+                                        </div>
+
+                                   </div>
+                                   <ul class="row">
+                                        <li class="col-md-3">
+                                             <a href="#" class="user_item card text-center">
+                                                  <i class="options fas fa-ellipsis-v"></i>
+                                                  <img src="img/avatar2.jpg" class="card-img-top" alt="...">
+
+                                                  <h2>mohamed kitab</h2>
+                                                  <h3>@youser name</h3>
+
+                                                  <p class="card-text">
+                                                       <span><i class="fas fa-graduation-cap"></i></span> collage of
+                                                       fine arts
+                                                  </p>
+                                                  <form class="form-control">
+                                                       <button><i class="fas fa-mask"></i></button>
+                                                       <button>unfollow <i class="fas fa-user-minus"></i></button>
+                                                       <button><i class="far fa-comment-dots"></i></button>
+                                                  </form>
+
+                                                  <span>is following you</span>
+                                             </a>
+                                        </li>
+                                        <li class="col-md-3">
+                                             <a href="#" class="user_item card text-center">
+                                                  <i class="options fas fa-ellipsis-v"></i>
+                                                  <img src="img/avatar4.jpg" class="have_story card-img-top" alt="...">
+
+                                                  <h2>mohamed kitab</h2>
+                                                  <h3>@youser name</h3>
+                                                  <p class="card-text">
+                                                       <span><i class="fas fa-graduation-cap"></i></span> cairo
+                                                       university
+                                                  </p>
+                                                  <form class="form-control">
+                                                       <button><i class="fas fa-mask"></i></button>
+                                                       <button>unfollow <i class="fas fa-user-minus"></i></button>
+                                                       <button><i class="far fa-comment-dots"></i></button>
+                                                  </form>
+
+                                                  <span>is following you</span>
+                                             </a>
+                                        </li>
+                                        <li class="col-md-3">
+                                             <a href="#" class="user_item card text-center">
+                                                  <i class="options fas fa-ellipsis-v"></i>
+                                                  <img src="img/profile.png" class="card-img-top" alt="...">
+
+                                                  <h2>mohamed kitab</h2>
+                                                  <h3>@youser name</h3>
+                                                  <p class="card-text">
+                                                       <span><i class="fas fa-graduation-cap"></i></span> baghdad
+                                                       university
+                                                  </p>
+
+                                                  <form class="form-control">
+                                                       <button><i class="fas fa-mask"></i></button>
+                                                       <button>unfollow <i class="fas fa-user-minus"></i></button>
+                                                       <button><i class="far fa-comment-dots"></i></button>
+                                                  </form>
+
+                                                  <span>is following you</span>
+                                             </a>
+                                        </li>
+                                        <li class="col-md-3">
+                                             <a href="#" class="user_item card text-center">
+                                                  <i class="options fas fa-ellipsis-v"></i>
+                                                  <img src="img/avatar1.jpg" class="card-img-top" alt="...">
+
+                                                  <h2>mohamed kitab</h2>
+                                                  <h3>@youser name</h3>
+                                                  <p class="card-text">
+                                                       <span><i class="fas fa-graduation-cap"></i></span> collage of
+                                                       fine arts
+                                                  </p>
+                                                  <form class="form-control">
+                                                       <button><i class="fas fa-mask"></i></button>
+                                                       <button>unfollow <i class="fas fa-user-minus"></i></button>
+                                                       <button><i class="far fa-comment-dots"></i></button>
+                                                  </form>
+
+
+                                                  <span>is following you</span>
+                                             </a>
+                                        </li>
+
+                                        <li class="col-md-3">
+                                             <a href="#" class="user_item card text-center">
+                                                  <i class="options fas fa-ellipsis-v"></i>
+                                                  <img src="img/avatar1.jpg" class="card-img-top" alt="...">
+
+                                                  <h2>mohamed kitab</h2>
+                                                  <h3>@youser name</h3>
+                                                  <p class="card-text">
+                                                       <span><i class="fas fa-graduation-cap"></i></span> collage of
+                                                       fine arts
+                                                  </p>
+                                                  <form class="form-control">
+                                                       <button><i class="fas fa-mask"></i></button>
+                                                       <button>unfollow <i class="fas fa-user-minus"></i></button>
+                                                       <button><i class="far fa-comment-dots"></i></button>
+                                                  </form>
+
+
+                                                  <span>is following you</span>
+                                             </a>
+                                        </li>
+
+                                        <li class="col-md-3">
+                                             <a href="#" class="user_item card text-center">
+                                                  <i class="options fas fa-ellipsis-v"></i>
+                                                  <img src="img/avatar1.jpg" class="card-img-top" alt="...">
+
+                                                  <h2>mohamed kitab</h2>
+                                                  <h3>@youser name</h3>
+                                                  <p class="card-text">
+                                                       <span><i class="fas fa-graduation-cap"></i></span> collage of
+                                                       fine arts
+                                                  </p>
+                                                  <form class="form-control">
+                                                       <button><i class="fas fa-mask"></i></button>
+                                                       <button>unfollow <i class="fas fa-user-minus"></i></button>
+                                                       <button><i class="far fa-comment-dots"></i></button>
+                                                  </form>
+
+
+                                                  <span>is following you</span>
+                                             </a>
+                                        </li>
+
+                                        <li class="col-md-3">
+                                             <a href="#" class="user_item card text-center">
+                                                  <i class="options fas fa-ellipsis-v"></i>
+                                                  <img src="img/avatar1.jpg" class="card-img-top" alt="...">
+
+                                                  <h2>mohamed kitab</h2>
+                                                  <h3>@youser name</h3>
+                                                  <p class="card-text">
+                                                       <span><i class="fas fa-graduation-cap"></i></span> collage of
+                                                       fine arts
+                                                  </p>
+                                                  <form class="form-control">
+                                                       <button><i class="fas fa-mask"></i></button>
+                                                       <button>unfollow <i class="fas fa-user-minus"></i></button>
+                                                       <button><i class="far fa-comment-dots"></i></button>
+                                                  </form>
+
+
+                                                  <span>is following you</span>
+                                             </a>
+                                        </li>
+
+                                        <li class="col-md-3">
+                                             <a href="#" class="user_item card text-center">
+                                                  <i class="options fas fa-ellipsis-v"></i>
+                                                  <img src="img/avatar1.jpg" class="card-img-top" alt="...">
+
+                                                  <h2>mohamed kitab</h2>
+                                                  <h3>@youser name</h3>
+                                                  <p class="card-text">
+                                                       <span><i class="fas fa-graduation-cap"></i></span> collage of
+                                                       fine arts
+                                                  </p>
+                                                  <form class="form-control">
+                                                       <button><i class="fas fa-mask"></i></button>
+                                                       <button>unfollow <i class="fas fa-user-minus"></i></button>
+                                                       <button><i class="far fa-comment-dots"></i></button>
+                                                  </form>
+
+
+                                                  <span>is following you</span>
+                                             </a>
+                                        </li>
+
+
+                                   </ul>
+                              </div>
+
+                              <!--/ Following Content -->
+
+                              <!-- Posts Content -->
+                              <div class="tab-pane fade show active in" id="posts" aria-labelledby="#posts"
+                                   role="tabpanel">
+                                   <div class="row">
+                                        <div class="card-header">
+                                             Posts
+                                        </div>
+                                   </div>                                        
+                                        <div class="posts_container">
+                                             <div class="post_box">
+                                                  
+                                                  <div class="post_img">
+                                                       <img src="img/photo-1542654071-7ded22488685.jpg">
+                                                  </div>
+
+                                                  <div id="like_btn">
+                                                       <button><i class="ti-heart"></i></button>
+                                                  </div>
+                                                  
+                                             </div>
+
+                                             <div class="post_box">
+                                                  
+                                                  <div class="post_img">
+                                                       <img src="img/ms-files.png">
+                                                  </div>
+
+                                                  <div id="like_btn">
+                                                       <button><i class="ti-heart"></i></button>
+                                                  </div>
+                                                  
+                                             </div>
+
+                                             <div class="post_box">
+                                                  
+                                                  <div class="post_img">
+                                                       <img src="img/post-img.jpg">
+                                                  </div>
+
+                                                  <div id="like_btn">
+                                                       <button><i class="ti-heart"></i></button>
+                                                  </div>
+                                                  
+                                             </div>
+
+                                             <div class="post_box">
+                                                  
+                                                  <div class="post_img">
+                                                       <img src="img/ms-files.png">
+                                                  </div>
+
+                                                  <div id="like_btn">
+                                                       <button><i class="ti-heart"></i></button>
+                                                  </div>
+                                                  
+                                             </div>
+
+                                             <div class="post_box">
+                                                  
+                                                  <div class="post_img">
+                                                       <img src="img/ms-files.png">
+                                                  </div>
+
+                                                  <div id="like_btn">
+                                                       <button><i class="ti-heart"></i></button>
+                                                  </div>
+                                                  
+                                             </div>
+
+                                              <div class="post_box">
+                                                  
+                                                  <div class="post_img">
+                                                       <img src="img/photo-1518005020951-eccb494ad742.jpg">
+                                                  </div>
+
+                                                  <div id="like_btn">
+                                                       <button><i class="ti-heart"></i></button>
+                                                  </div>
+                                                  
+                                             </div>
+
+                                             <div class="post_box">
+                                                  
+                                                  <div class="post_img">
+                                                       <img src="img/post-img.jpg">
+                                                  </div>
+
+                                                  <div id="like_btn">
+                                                       <button><i class="ti-heart"></i></button>
+                                                  </div>
+                                                  
+                                             </div>
+
+                                             <div class="post_box">
+                                                  
+                                                  <div class="post_img">
+                                                       <img src="img/photo-1518005020951-eccb494ad742.jpg">
+                                                  </div>
+
+                                                  <div id="like_btn">
+                                                       <button><i class="ti-heart"></i></button>
+                                                  </div>
+                                                  
+                                             </div>
+
+                                             <div class="post_box">
+                                                  
+                                                  <div class="post_img">
+                                                       <img src="img/post-img.jpg">
+                                                  </div>
+
+                                                  <div id="like_btn">
+                                                       <button><i class="ti-heart"></i></button>
+                                                  </div>
+                                                  
+                                             </div>
+
+                                        </div>
+
+                              </div>
+                              <!--/ Posts Content -->
+
+                              <!-- About Content -->
+                              <div class="tab-pane fade" id="edit_profile" aria-labelledby="#edit_profile"
+                                   role="tabpanel">
+                                   <div class="row">
+                                        <div class="card-header">
+                                             About
+                                        </div>
+                                   </div>
+
+                                   <form id="edit_profile_form">
+
+                                        <!-- Full Name -->
+                                        <div class="form-control">
+                                             <div class="col-md-6 left">
+                                                  <span>Full Name :</span>
+                                                  <div class="input-wrap">
+                                                       <i class="far fa-user"></i>
+                                                       <label for="fname">Mohamed Alazawy</label>
+                                                       <input class="input" name="reg_fname" type="text" id="fname"
+                                                            disabled />
+                                                  </div>
+                                             </div>
+
+                                             <div class="col-md-6 right">
+                                                  <span>Age :</span>
+                                                  <div class="input-wrap">
+                                                       <i class="fas fa-birthday-cake"></i>
+                                                       <label for="age">26 Years</label>
+                                                       <input class="input" name="age" type="text" id="age" disabled />
+                                                  </div>
+                                             </div>
+
+                                        </div>
+
+                                        <!-- -->
+                                        <div class="form-control">
+                                             <div class="col-md-6 left">
+                                                  <span>Location :</span>
+                                                  <div class="input-wrap">
+                                                       <i class="material-icons"> gps_fixed </i>
+                                                       <label for="city">Baghdad | Iraq</label>
+                                                       <input class="input" name="city" type="text" id="city"
+                                                            disabled />
+                                                  </div>
+                                             </div>
+
+                                             <div class="col-md-6 right">
+                                                  <span>Univercity :</span>
+                                                  <div class="input-wrap">
+                                                       <i class="fas fa-user-graduate"></i>
+                                                       <label for="uni">university Of Baghdad</label>
+                                                       <input class="input" name="uni" type="text" id="uni" disabled />
+
+                                                  </div>
+                                             </div>
+
+                                        </div>
+                                        <!-- -->
+                                        <div class="form-control">
+                                             <div class="col-md-6 left">
+                                                  <span>Case :</span>
+                                                  <div class="input-wrap">
+                                                       <i class="material-icons"> person </i>
+                                                       <label for="a">Married</label>
+                                                       <input class="input" name="a" type="text" id="a" disabled />
+                                                  </div>
+                                             </div>
+                                             <div class="col-md-6 right">
+                                                  <span>avocations :</span>
+                                                  <div class="input-wrap">
+                                                       <i class="material-icons"> stars </i>
+                                                       <label for="act">football , draw , design , copmuter</label>
+                                                       <input class="input" name="act" type="text" id="act" disabled />
+                                                  </div>
+                                             </div>
+                                        </div>
+
+
+                                   </form>
+                              </div>
+                              <!--/ About Content -->
+
+                              <!-- Settings Content -->
+                              <div class="tab-pane fade" id="settings" aria-labelledby="#Settings" role="tabpanel">
+                                   <div class="row">
+                                        <div class="card-header">
+                                             Settings
+                                        </div>
+                                   </div>
+
+                                   <form>
+                                        <div class="form-control">
+                                             <div class="col-9 left">
+                                                  <h4>Pravicy Account</h4>
+                                                  <p>When your account is private, only people you approve can see your
+                                                       photos and videos on Zombie. Your existing followers won't be
+                                                       affected.
+                                                  </p>
+                                             </div>
+
+                                             <div class="col-1 right">
+                                                  <input type="checkbox" id="pravicy_switch" />
+                                                  <label class="switch" for="pravicy_switch">Toggle</label>
+                                             </div>
+
+                                        </div>
+                                        <!-- story Sharing -->
+                                        <div class="form-control">
+                                             <div class="col-9 left">
+                                                  <h4>Story Sharing</h4>
+                                                  <p>Let people share your story as messages.
+                                                  </p>
+                                             </div>
+
+                                             <div class="col-1 right">
+                                                  <input type="checkbox" id="sh_story_switch" />
+                                                  <label class="switch" for="sh_story_switch">Toggle</label>
+                                             </div>
+                                        </div>
+
+                                        <!-- Secret Message -->
+                                        <div class="form-control">
+                                             <div class="col-9 left">
+                                                  <h4>Secret Message</h4>
+                                                  <p>Let people can sent you secret messages.
+                                                  </p>
+                                             </div>
+
+                                             <div class="col-1 right">
+                                                  <input type="checkbox" id="secret_msg_switch" />
+                                                  <label class="switch" for="secret_msg_switch">Toggle</label>
+                                             </div>
+
+                                        </div>
+
+                                        <!-- Dark Mode -->
+                                        <div class="form-control">
+                                             <div class="col-9 left">
+                                                  <h4>Dark Mode</h4>
+                                                  <p>
+                                                       Activation Dark Mode
+                                                  </p>
+                                             </div>
+
+                                             <div class="col-1 right">
+                                                  <input type="checkbox" id="theme" name="theme" />
+                                                  <label class="switch" for="theme" name="theme">Toggle</label>
+                                             </div>
+
+                                        </div>
+
+                                        <div class="row">
+                                             <div class="card-footer">
+                                                  <button type="submit" name="save">Save Changes</button>
+                                             </div>
+                                        </div>
+
+                                   </form>
+
+                              </div>
+                              <!--/ Settings Content -->
+
+                              <!-- Trash Content -->
+                              <div class="tab-pane fade" id="trash" aria-labelledby="#trash" role="tabpanel">
+                                   <div class="row">
+                                        <div class="card-header">
+                                             Trash
+                                        </div>
+                                   </div>
+
+                                   <form>
+                                        <div class="form-control">
+                                             <div class="col-9 trash_content left">
+                                                  <h3>You are Deleted This Post at <time>Sat 12:47pm</time></h3>
+                                                  <img src="img/post-img.jpg">
+                                                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing</p>
+                                             </div>
+
+                                             <div class="col-2 restore_btn right">
+                                                  <button><i class="material-icons"> cached </i> Restore</button>
+                                             </div>
+
+                                        </div>
+                                        <!-- story Sharing -->
+                                        <div class="form-control">
+                                             <div class="col-9 left">
+                                                  <h4>Story Sharing</h4>
+                                                  <p>Let people share your story as messages.
+                                                  </p>
+                                             </div>
+
+                                             <div class="col-1 right">
+                                                  <input type="checkbox" id="sh_story_switch" />
+                                                  <label class="switch" for="sh_story_switch">Toggle</label>
+                                             </div>
+                                        </div>
+
+                                        <!-- Secret Message -->
+                                        <div class="form-control">
+                                             <div class="col-9 left">
+                                                  <h4>Secret Message</h4>
+                                                  <p>Let people can sent you secret messages.
+                                                  </p>
+                                             </div>
+
+                                             <div class="col-1 right">
+                                                  <input type="checkbox" id="secret_msg_switch" />
+                                                  <label class="switch" for="secret_msg_switch">Toggle</label>
+                                             </div>
+
+                                        </div>
+
+                                        <!-- Dark Mode -->
+                                        <div class="form-control">
+                                             <div class="col-9 left">
+                                                  <h4>Dark Mode</h4>
+                                                  <p>
+                                                       Activation Dark Mode
+                                                  </p>
+                                             </div>
+
+                                             <div class="col-1 right">
+                                                  <input type="checkbox" id="theme" name="theme" />
+                                                  <label class="switch" for="theme" name="theme">Toggle</label>
+                                             </div>
+
+                                        </div>
+
+                                        <div class="row">
+                                             <div class="card-footer">
+                                                  <button type="submit" name="save">Save Changes</button>
+                                             </div>
+                                        </div>
+
+                                   </form>
+
+                              </div>
+                              <!--/ Trash Content -->
+
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+
+
+
+
+
+
+     <!-- scripts directory -->
+     <script src="js/jquery-3.4.1.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/main.js"></script>
+     <script src="js/emoji.min.js"></script>
+     <script>
+          $(document).ready(function () {
+               $('#scr_msg_content').emojioneArea({
+                    pickerPosition: 'center',
+                    filtersPosition: 'bottom',
+                    autocompleteTones: true
+               });
+
+               // dark & light mode
+               var theme = document.querySelector('input[name=theme]');
+
+               theme.addEventListener('change', function () {
+               if (this.checked) {
+               trans();
+               document.documentElement.setAttribute('data-theme', 'dark');
+               } else {
+               trans();
+               document.documentElement.setAttribute('data-theme', 'light');
+               }
+               });
+
+               let trans = () => {
+               document.documentElement.classList.add('transition');
+               window.setTimeout(() => {
+               document.documentElement.classList.remove('transition');
+               }, 1000);
+               };
+          });
+     </script>
+
+</body>
+
+</html>
